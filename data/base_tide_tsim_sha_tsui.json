@@ -1,0 +1,3205 @@
+{
+  "spot_id": "tsim_sha_tsui",
+  "spot_name": "尖沙咀",
+  "station_id": "QUB",
+  "station_note": "借用鰓魚涌(QUB)資料代表維港潮汐",
+  "status": "ok",
+  "generated_at": "2026-06-27",
+  "year": 2026,
+  "month": 7,
+  "days": {
+    "2026-07-01": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.23
+        },
+        {
+          "hour": 2,
+          "height_m": 1.19
+        },
+        {
+          "hour": 3,
+          "height_m": 1.2
+        },
+        {
+          "hour": 4,
+          "height_m": 1.32
+        },
+        {
+          "hour": 5,
+          "height_m": 1.58
+        },
+        {
+          "hour": 6,
+          "height_m": 1.86
+        },
+        {
+          "hour": 7,
+          "height_m": 2.12
+        },
+        {
+          "hour": 8,
+          "height_m": 2.24
+        },
+        {
+          "hour": 9,
+          "height_m": 2.27
+        },
+        {
+          "hour": 10,
+          "height_m": 2.25
+        },
+        {
+          "hour": 11,
+          "height_m": 2.12
+        },
+        {
+          "hour": 12,
+          "height_m": 1.9
+        },
+        {
+          "hour": 13,
+          "height_m": 1.54
+        },
+        {
+          "hour": 14,
+          "height_m": 1.15
+        },
+        {
+          "hour": 15,
+          "height_m": 0.79
+        },
+        {
+          "hour": 16,
+          "height_m": 0.51
+        },
+        {
+          "hour": 17,
+          "height_m": 0.41
+        },
+        {
+          "hour": 18,
+          "height_m": 0.44
+        },
+        {
+          "hour": 19,
+          "height_m": 0.59
+        },
+        {
+          "hour": 20,
+          "height_m": 0.77
+        },
+        {
+          "hour": 21,
+          "height_m": 0.94
+        },
+        {
+          "hour": 22,
+          "height_m": 1.12
+        },
+        {
+          "hour": 23,
+          "height_m": 1.24
+        },
+        {
+          "hour": 24,
+          "height_m": 1.3
+        }
+      ],
+      "amplitude_m": 1.86,
+      "tide_range_score": 90.7,
+      "lunar_date": "五月十七"
+    },
+    "2026-07-02": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.28
+        },
+        {
+          "hour": 2,
+          "height_m": 1.2
+        },
+        {
+          "hour": 3,
+          "height_m": 1.18
+        },
+        {
+          "hour": 4,
+          "height_m": 1.21
+        },
+        {
+          "hour": 5,
+          "height_m": 1.39
+        },
+        {
+          "hour": 6,
+          "height_m": 1.67
+        },
+        {
+          "hour": 7,
+          "height_m": 1.95
+        },
+        {
+          "hour": 8,
+          "height_m": 2.17
+        },
+        {
+          "hour": 9,
+          "height_m": 2.25
+        },
+        {
+          "hour": 10,
+          "height_m": 2.26
+        },
+        {
+          "hour": 11,
+          "height_m": 2.2
+        },
+        {
+          "hour": 12,
+          "height_m": 2.04
+        },
+        {
+          "hour": 13,
+          "height_m": 1.77
+        },
+        {
+          "hour": 14,
+          "height_m": 1.38
+        },
+        {
+          "hour": 15,
+          "height_m": 1.0
+        },
+        {
+          "hour": 16,
+          "height_m": 0.67
+        },
+        {
+          "hour": 17,
+          "height_m": 0.46
+        },
+        {
+          "hour": 18,
+          "height_m": 0.44
+        },
+        {
+          "hour": 19,
+          "height_m": 0.53
+        },
+        {
+          "hour": 20,
+          "height_m": 0.71
+        },
+        {
+          "hour": 21,
+          "height_m": 0.88
+        },
+        {
+          "hour": 22,
+          "height_m": 1.05
+        },
+        {
+          "hour": 23,
+          "height_m": 1.2
+        },
+        {
+          "hour": 24,
+          "height_m": 1.29
+        }
+      ],
+      "amplitude_m": 1.82,
+      "tide_range_score": 88.0,
+      "lunar_date": "五月十八"
+    },
+    "2026-07-03": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.32
+        },
+        {
+          "hour": 2,
+          "height_m": 1.26
+        },
+        {
+          "hour": 3,
+          "height_m": 1.2
+        },
+        {
+          "hour": 4,
+          "height_m": 1.18
+        },
+        {
+          "hour": 5,
+          "height_m": 1.25
+        },
+        {
+          "hour": 6,
+          "height_m": 1.47
+        },
+        {
+          "hour": 7,
+          "height_m": 1.74
+        },
+        {
+          "hour": 8,
+          "height_m": 2.01
+        },
+        {
+          "hour": 9,
+          "height_m": 2.17
+        },
+        {
+          "hour": 10,
+          "height_m": 2.22
+        },
+        {
+          "hour": 11,
+          "height_m": 2.22
+        },
+        {
+          "hour": 12,
+          "height_m": 2.12
+        },
+        {
+          "hour": 13,
+          "height_m": 1.93
+        },
+        {
+          "hour": 14,
+          "height_m": 1.61
+        },
+        {
+          "hour": 15,
+          "height_m": 1.23
+        },
+        {
+          "hour": 16,
+          "height_m": 0.88
+        },
+        {
+          "hour": 17,
+          "height_m": 0.59
+        },
+        {
+          "hour": 18,
+          "height_m": 0.47
+        },
+        {
+          "hour": 19,
+          "height_m": 0.51
+        },
+        {
+          "hour": 20,
+          "height_m": 0.66
+        },
+        {
+          "hour": 21,
+          "height_m": 0.85
+        },
+        {
+          "hour": 22,
+          "height_m": 1.0
+        },
+        {
+          "hour": 23,
+          "height_m": 1.15
+        },
+        {
+          "hour": 24,
+          "height_m": 1.28
+        }
+      ],
+      "amplitude_m": 1.75,
+      "tide_range_score": 83.3,
+      "lunar_date": "五月十九"
+    },
+    "2026-07-04": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.34
+        },
+        {
+          "hour": 2,
+          "height_m": 1.34
+        },
+        {
+          "hour": 3,
+          "height_m": 1.26
+        },
+        {
+          "hour": 4,
+          "height_m": 1.2
+        },
+        {
+          "hour": 5,
+          "height_m": 1.19
+        },
+        {
+          "hour": 6,
+          "height_m": 1.29
+        },
+        {
+          "hour": 7,
+          "height_m": 1.52
+        },
+        {
+          "hour": 8,
+          "height_m": 1.79
+        },
+        {
+          "hour": 9,
+          "height_m": 2.02
+        },
+        {
+          "hour": 10,
+          "height_m": 2.12
+        },
+        {
+          "hour": 11,
+          "height_m": 2.15
+        },
+        {
+          "hour": 12,
+          "height_m": 2.13
+        },
+        {
+          "hour": 13,
+          "height_m": 2.01
+        },
+        {
+          "hour": 14,
+          "height_m": 1.79
+        },
+        {
+          "hour": 15,
+          "height_m": 1.44
+        },
+        {
+          "hour": 16,
+          "height_m": 1.09
+        },
+        {
+          "hour": 17,
+          "height_m": 0.78
+        },
+        {
+          "hour": 18,
+          "height_m": 0.57
+        },
+        {
+          "hour": 19,
+          "height_m": 0.54
+        },
+        {
+          "hour": 20,
+          "height_m": 0.63
+        },
+        {
+          "hour": 21,
+          "height_m": 0.82
+        },
+        {
+          "hour": 22,
+          "height_m": 0.98
+        },
+        {
+          "hour": 23,
+          "height_m": 1.12
+        },
+        {
+          "hour": 24,
+          "height_m": 1.26
+        }
+      ],
+      "amplitude_m": 1.61,
+      "tide_range_score": 74.0,
+      "lunar_date": "五月二十"
+    },
+    "2026-07-05": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.36
+        },
+        {
+          "hour": 2,
+          "height_m": 1.4
+        },
+        {
+          "hour": 3,
+          "height_m": 1.36
+        },
+        {
+          "hour": 4,
+          "height_m": 1.28
+        },
+        {
+          "hour": 5,
+          "height_m": 1.22
+        },
+        {
+          "hour": 6,
+          "height_m": 1.21
+        },
+        {
+          "hour": 7,
+          "height_m": 1.33
+        },
+        {
+          "hour": 8,
+          "height_m": 1.55
+        },
+        {
+          "hour": 9,
+          "height_m": 1.79
+        },
+        {
+          "hour": 10,
+          "height_m": 1.96
+        },
+        {
+          "hour": 11,
+          "height_m": 2.02
+        },
+        {
+          "hour": 12,
+          "height_m": 2.05
+        },
+        {
+          "hour": 13,
+          "height_m": 2.0
+        },
+        {
+          "hour": 14,
+          "height_m": 1.87
+        },
+        {
+          "hour": 15,
+          "height_m": 1.62
+        },
+        {
+          "hour": 16,
+          "height_m": 1.29
+        },
+        {
+          "hour": 17,
+          "height_m": 0.98
+        },
+        {
+          "hour": 18,
+          "height_m": 0.73
+        },
+        {
+          "hour": 19,
+          "height_m": 0.61
+        },
+        {
+          "hour": 20,
+          "height_m": 0.65
+        },
+        {
+          "hour": 21,
+          "height_m": 0.79
+        },
+        {
+          "hour": 22,
+          "height_m": 0.98
+        },
+        {
+          "hour": 23,
+          "height_m": 1.12
+        },
+        {
+          "hour": 24,
+          "height_m": 1.25
+        }
+      ],
+      "amplitude_m": 1.44,
+      "tide_range_score": 62.7,
+      "lunar_date": "五月廿一"
+    },
+    "2026-07-06": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.37
+        },
+        {
+          "hour": 2,
+          "height_m": 1.45
+        },
+        {
+          "hour": 3,
+          "height_m": 1.47
+        },
+        {
+          "hour": 4,
+          "height_m": 1.4
+        },
+        {
+          "hour": 5,
+          "height_m": 1.31
+        },
+        {
+          "hour": 6,
+          "height_m": 1.23
+        },
+        {
+          "hour": 7,
+          "height_m": 1.22
+        },
+        {
+          "hour": 8,
+          "height_m": 1.34
+        },
+        {
+          "hour": 9,
+          "height_m": 1.52
+        },
+        {
+          "hour": 10,
+          "height_m": 1.72
+        },
+        {
+          "hour": 11,
+          "height_m": 1.84
+        },
+        {
+          "hour": 12,
+          "height_m": 1.89
+        },
+        {
+          "hour": 13,
+          "height_m": 1.9
+        },
+        {
+          "hour": 14,
+          "height_m": 1.84
+        },
+        {
+          "hour": 15,
+          "height_m": 1.71
+        },
+        {
+          "hour": 16,
+          "height_m": 1.46
+        },
+        {
+          "hour": 17,
+          "height_m": 1.18
+        },
+        {
+          "hour": 18,
+          "height_m": 0.92
+        },
+        {
+          "hour": 19,
+          "height_m": 0.74
+        },
+        {
+          "hour": 20,
+          "height_m": 0.71
+        },
+        {
+          "hour": 21,
+          "height_m": 0.79
+        },
+        {
+          "hour": 22,
+          "height_m": 0.97
+        },
+        {
+          "hour": 23,
+          "height_m": 1.14
+        },
+        {
+          "hour": 24,
+          "height_m": 1.27
+        }
+      ],
+      "amplitude_m": 1.19,
+      "tide_range_score": 46.0,
+      "lunar_date": "五月廿二"
+    },
+    "2026-07-07": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.39
+        },
+        {
+          "hour": 2,
+          "height_m": 1.49
+        },
+        {
+          "hour": 3,
+          "height_m": 1.56
+        },
+        {
+          "hour": 4,
+          "height_m": 1.54
+        },
+        {
+          "hour": 5,
+          "height_m": 1.45
+        },
+        {
+          "hour": 6,
+          "height_m": 1.34
+        },
+        {
+          "hour": 7,
+          "height_m": 1.23
+        },
+        {
+          "hour": 8,
+          "height_m": 1.21
+        },
+        {
+          "hour": 9,
+          "height_m": 1.29
+        },
+        {
+          "hour": 10,
+          "height_m": 1.44
+        },
+        {
+          "hour": 11,
+          "height_m": 1.59
+        },
+        {
+          "hour": 12,
+          "height_m": 1.66
+        },
+        {
+          "hour": 13,
+          "height_m": 1.71
+        },
+        {
+          "hour": 14,
+          "height_m": 1.71
+        },
+        {
+          "hour": 15,
+          "height_m": 1.67
+        },
+        {
+          "hour": 16,
+          "height_m": 1.55
+        },
+        {
+          "hour": 17,
+          "height_m": 1.33
+        },
+        {
+          "hour": 18,
+          "height_m": 1.11
+        },
+        {
+          "hour": 19,
+          "height_m": 0.91
+        },
+        {
+          "hour": 20,
+          "height_m": 0.81
+        },
+        {
+          "hour": 21,
+          "height_m": 0.84
+        },
+        {
+          "hour": 22,
+          "height_m": 0.97
+        },
+        {
+          "hour": 23,
+          "height_m": 1.16
+        },
+        {
+          "hour": 24,
+          "height_m": 1.32
+        }
+      ],
+      "amplitude_m": 0.9,
+      "tide_range_score": 26.7,
+      "lunar_date": "五月廿三"
+    },
+    "2026-07-08": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.44
+        },
+        {
+          "hour": 2,
+          "height_m": 1.55
+        },
+        {
+          "hour": 3,
+          "height_m": 1.64
+        },
+        {
+          "hour": 4,
+          "height_m": 1.68
+        },
+        {
+          "hour": 5,
+          "height_m": 1.63
+        },
+        {
+          "hour": 6,
+          "height_m": 1.51
+        },
+        {
+          "hour": 7,
+          "height_m": 1.35
+        },
+        {
+          "hour": 8,
+          "height_m": 1.2
+        },
+        {
+          "hour": 9,
+          "height_m": 1.15
+        },
+        {
+          "hour": 10,
+          "height_m": 1.18
+        },
+        {
+          "hour": 11,
+          "height_m": 1.29
+        },
+        {
+          "hour": 12,
+          "height_m": 1.39
+        },
+        {
+          "hour": 13,
+          "height_m": 1.45
+        },
+        {
+          "hour": 14,
+          "height_m": 1.49
+        },
+        {
+          "hour": 15,
+          "height_m": 1.51
+        },
+        {
+          "hour": 16,
+          "height_m": 1.5
+        },
+        {
+          "hour": 17,
+          "height_m": 1.41
+        },
+        {
+          "hour": 18,
+          "height_m": 1.26
+        },
+        {
+          "hour": 19,
+          "height_m": 1.1
+        },
+        {
+          "hour": 20,
+          "height_m": 0.96
+        },
+        {
+          "hour": 21,
+          "height_m": 0.93
+        },
+        {
+          "hour": 22,
+          "height_m": 0.99
+        },
+        {
+          "hour": 23,
+          "height_m": 1.16
+        },
+        {
+          "hour": 24,
+          "height_m": 1.36
+        }
+      ],
+      "amplitude_m": 0.75,
+      "tide_range_score": 16.7,
+      "lunar_date": "五月廿四"
+    },
+    "2026-07-09": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.51
+        },
+        {
+          "hour": 2,
+          "height_m": 1.64
+        },
+        {
+          "hour": 3,
+          "height_m": 1.73
+        },
+        {
+          "hour": 4,
+          "height_m": 1.8
+        },
+        {
+          "hour": 5,
+          "height_m": 1.81
+        },
+        {
+          "hour": 6,
+          "height_m": 1.72
+        },
+        {
+          "hour": 7,
+          "height_m": 1.55
+        },
+        {
+          "hour": 8,
+          "height_m": 1.34
+        },
+        {
+          "hour": 9,
+          "height_m": 1.14
+        },
+        {
+          "hour": 10,
+          "height_m": 1.03
+        },
+        {
+          "hour": 11,
+          "height_m": 1.01
+        },
+        {
+          "hour": 12,
+          "height_m": 1.08
+        },
+        {
+          "hour": 13,
+          "height_m": 1.16
+        },
+        {
+          "hour": 14,
+          "height_m": 1.22
+        },
+        {
+          "hour": 15,
+          "height_m": 1.27
+        },
+        {
+          "hour": 16,
+          "height_m": 1.33
+        },
+        {
+          "hour": 17,
+          "height_m": 1.36
+        },
+        {
+          "hour": 18,
+          "height_m": 1.32
+        },
+        {
+          "hour": 19,
+          "height_m": 1.23
+        },
+        {
+          "hour": 20,
+          "height_m": 1.12
+        },
+        {
+          "hour": 21,
+          "height_m": 1.04
+        },
+        {
+          "hour": 22,
+          "height_m": 1.05
+        },
+        {
+          "hour": 23,
+          "height_m": 1.15
+        },
+        {
+          "hour": 24,
+          "height_m": 1.34
+        }
+      ],
+      "amplitude_m": 0.8,
+      "tide_range_score": 20.0,
+      "lunar_date": "五月廿五"
+    },
+    "2026-07-10": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.55
+        },
+        {
+          "hour": 2,
+          "height_m": 1.72
+        },
+        {
+          "hour": 3,
+          "height_m": 1.85
+        },
+        {
+          "hour": 4,
+          "height_m": 1.93
+        },
+        {
+          "hour": 5,
+          "height_m": 1.98
+        },
+        {
+          "hour": 6,
+          "height_m": 1.95
+        },
+        {
+          "hour": 7,
+          "height_m": 1.81
+        },
+        {
+          "hour": 8,
+          "height_m": 1.59
+        },
+        {
+          "hour": 9,
+          "height_m": 1.3
+        },
+        {
+          "hour": 10,
+          "height_m": 1.04
+        },
+        {
+          "hour": 11,
+          "height_m": 0.86
+        },
+        {
+          "hour": 12,
+          "height_m": 0.8
+        },
+        {
+          "hour": 13,
+          "height_m": 0.84
+        },
+        {
+          "hour": 14,
+          "height_m": 0.91
+        },
+        {
+          "hour": 15,
+          "height_m": 0.99
+        },
+        {
+          "hour": 16,
+          "height_m": 1.07
+        },
+        {
+          "hour": 17,
+          "height_m": 1.17
+        },
+        {
+          "hour": 18,
+          "height_m": 1.26
+        },
+        {
+          "hour": 19,
+          "height_m": 1.28
+        },
+        {
+          "hour": 20,
+          "height_m": 1.24
+        },
+        {
+          "hour": 21,
+          "height_m": 1.18
+        },
+        {
+          "hour": 22,
+          "height_m": 1.13
+        },
+        {
+          "hour": 23,
+          "height_m": 1.16
+        },
+        {
+          "hour": 24,
+          "height_m": 1.28
+        }
+      ],
+      "amplitude_m": 1.18,
+      "tide_range_score": 45.3,
+      "lunar_date": "五月廿六"
+    },
+    "2026-07-11": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.5
+        },
+        {
+          "hour": 2,
+          "height_m": 1.74
+        },
+        {
+          "hour": 3,
+          "height_m": 1.93
+        },
+        {
+          "hour": 4,
+          "height_m": 2.06
+        },
+        {
+          "hour": 5,
+          "height_m": 2.13
+        },
+        {
+          "hour": 6,
+          "height_m": 2.15
+        },
+        {
+          "hour": 7,
+          "height_m": 2.08
+        },
+        {
+          "hour": 8,
+          "height_m": 1.9
+        },
+        {
+          "hour": 9,
+          "height_m": 1.61
+        },
+        {
+          "hour": 10,
+          "height_m": 1.25
+        },
+        {
+          "hour": 11,
+          "height_m": 0.92
+        },
+        {
+          "hour": 12,
+          "height_m": 0.67
+        },
+        {
+          "hour": 13,
+          "height_m": 0.57
+        },
+        {
+          "hour": 14,
+          "height_m": 0.59
+        },
+        {
+          "hour": 15,
+          "height_m": 0.68
+        },
+        {
+          "hour": 16,
+          "height_m": 0.8
+        },
+        {
+          "hour": 17,
+          "height_m": 0.92
+        },
+        {
+          "hour": 18,
+          "height_m": 1.07
+        },
+        {
+          "hour": 19,
+          "height_m": 1.21
+        },
+        {
+          "hour": 20,
+          "height_m": 1.28
+        },
+        {
+          "hour": 21,
+          "height_m": 1.27
+        },
+        {
+          "hour": 22,
+          "height_m": 1.23
+        },
+        {
+          "hour": 23,
+          "height_m": 1.2
+        },
+        {
+          "hour": 24,
+          "height_m": 1.23
+        }
+      ],
+      "amplitude_m": 1.58,
+      "tide_range_score": 72.0,
+      "lunar_date": "五月廿七"
+    },
+    "2026-07-12": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.38
+        },
+        {
+          "hour": 2,
+          "height_m": 1.63
+        },
+        {
+          "hour": 3,
+          "height_m": 1.9
+        },
+        {
+          "hour": 4,
+          "height_m": 2.12
+        },
+        {
+          "hour": 5,
+          "height_m": 2.25
+        },
+        {
+          "hour": 6,
+          "height_m": 2.31
+        },
+        {
+          "hour": 7,
+          "height_m": 2.31
+        },
+        {
+          "hour": 8,
+          "height_m": 2.21
+        },
+        {
+          "hour": 9,
+          "height_m": 1.97
+        },
+        {
+          "hour": 10,
+          "height_m": 1.62
+        },
+        {
+          "hour": 11,
+          "height_m": 1.19
+        },
+        {
+          "hour": 12,
+          "height_m": 0.79
+        },
+        {
+          "hour": 13,
+          "height_m": 0.48
+        },
+        {
+          "hour": 14,
+          "height_m": 0.36
+        },
+        {
+          "hour": 15,
+          "height_m": 0.38
+        },
+        {
+          "hour": 16,
+          "height_m": 0.5
+        },
+        {
+          "hour": 17,
+          "height_m": 0.67
+        },
+        {
+          "hour": 18,
+          "height_m": 0.84
+        },
+        {
+          "hour": 19,
+          "height_m": 1.04
+        },
+        {
+          "hour": 20,
+          "height_m": 1.21
+        },
+        {
+          "hour": 21,
+          "height_m": 1.3
+        },
+        {
+          "hour": 22,
+          "height_m": 1.31
+        },
+        {
+          "hour": 23,
+          "height_m": 1.26
+        },
+        {
+          "hour": 24,
+          "height_m": 1.22
+        }
+      ],
+      "amplitude_m": 1.95,
+      "tide_range_score": 96.7,
+      "lunar_date": "五月廿八"
+    },
+    "2026-07-13": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.26
+        },
+        {
+          "hour": 2,
+          "height_m": 1.43
+        },
+        {
+          "hour": 3,
+          "height_m": 1.72
+        },
+        {
+          "hour": 4,
+          "height_m": 2.02
+        },
+        {
+          "hour": 5,
+          "height_m": 2.27
+        },
+        {
+          "hour": 6,
+          "height_m": 2.4
+        },
+        {
+          "hour": 7,
+          "height_m": 2.45
+        },
+        {
+          "hour": 8,
+          "height_m": 2.44
+        },
+        {
+          "hour": 9,
+          "height_m": 2.31
+        },
+        {
+          "hour": 10,
+          "height_m": 2.04
+        },
+        {
+          "hour": 11,
+          "height_m": 1.62
+        },
+        {
+          "hour": 12,
+          "height_m": 1.12
+        },
+        {
+          "hour": 13,
+          "height_m": 0.66
+        },
+        {
+          "hour": 14,
+          "height_m": 0.32
+        },
+        {
+          "hour": 15,
+          "height_m": 0.2
+        },
+        {
+          "hour": 16,
+          "height_m": 0.24
+        },
+        {
+          "hour": 17,
+          "height_m": 0.41
+        },
+        {
+          "hour": 18,
+          "height_m": 0.62
+        },
+        {
+          "hour": 19,
+          "height_m": 0.82
+        },
+        {
+          "hour": 20,
+          "height_m": 1.06
+        },
+        {
+          "hour": 21,
+          "height_m": 1.25
+        },
+        {
+          "hour": 22,
+          "height_m": 1.33
+        },
+        {
+          "hour": 23,
+          "height_m": 1.33
+        },
+        {
+          "hour": 24,
+          "height_m": 1.25
+        }
+      ],
+      "amplitude_m": 2.25,
+      "tide_range_score": 100.0,
+      "lunar_date": "五月廿九"
+    },
+    "2026-07-14": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.21
+        },
+        {
+          "hour": 2,
+          "height_m": 1.25
+        },
+        {
+          "hour": 3,
+          "height_m": 1.45
+        },
+        {
+          "hour": 4,
+          "height_m": 1.77
+        },
+        {
+          "hour": 5,
+          "height_m": 2.1
+        },
+        {
+          "hour": 6,
+          "height_m": 2.37
+        },
+        {
+          "hour": 7,
+          "height_m": 2.49
+        },
+        {
+          "hour": 8,
+          "height_m": 2.54
+        },
+        {
+          "hour": 9,
+          "height_m": 2.53
+        },
+        {
+          "hour": 10,
+          "height_m": 2.38
+        },
+        {
+          "hour": 11,
+          "height_m": 2.07
+        },
+        {
+          "hour": 12,
+          "height_m": 1.59
+        },
+        {
+          "hour": 13,
+          "height_m": 1.06
+        },
+        {
+          "hour": 14,
+          "height_m": 0.56
+        },
+        {
+          "hour": 15,
+          "height_m": 0.21
+        },
+        {
+          "hour": 16,
+          "height_m": 0.11
+        },
+        {
+          "hour": 17,
+          "height_m": 0.2
+        },
+        {
+          "hour": 18,
+          "height_m": 0.42
+        },
+        {
+          "hour": 19,
+          "height_m": 0.65
+        },
+        {
+          "hour": 20,
+          "height_m": 0.88
+        },
+        {
+          "hour": 21,
+          "height_m": 1.13
+        },
+        {
+          "hour": 22,
+          "height_m": 1.3
+        },
+        {
+          "hour": 23,
+          "height_m": 1.37
+        },
+        {
+          "hour": 24,
+          "height_m": 1.32
+        }
+      ],
+      "amplitude_m": 2.43,
+      "tide_range_score": 100.0,
+      "lunar_date": "六月初一"
+    },
+    "2026-07-15": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.23
+        },
+        {
+          "hour": 2,
+          "height_m": 1.18
+        },
+        {
+          "hour": 3,
+          "height_m": 1.21
+        },
+        {
+          "hour": 4,
+          "height_m": 1.44
+        },
+        {
+          "hour": 5,
+          "height_m": 1.78
+        },
+        {
+          "hour": 6,
+          "height_m": 2.14
+        },
+        {
+          "hour": 7,
+          "height_m": 2.4
+        },
+        {
+          "hour": 8,
+          "height_m": 2.5
+        },
+        {
+          "hour": 9,
+          "height_m": 2.57
+        },
+        {
+          "hour": 10,
+          "height_m": 2.56
+        },
+        {
+          "hour": 11,
+          "height_m": 2.4
+        },
+        {
+          "hour": 12,
+          "height_m": 2.05
+        },
+        {
+          "hour": 13,
+          "height_m": 1.53
+        },
+        {
+          "hour": 14,
+          "height_m": 0.99
+        },
+        {
+          "hour": 15,
+          "height_m": 0.48
+        },
+        {
+          "hour": 16,
+          "height_m": 0.17
+        },
+        {
+          "hour": 17,
+          "height_m": 0.13
+        },
+        {
+          "hour": 18,
+          "height_m": 0.27
+        },
+        {
+          "hour": 19,
+          "height_m": 0.53
+        },
+        {
+          "hour": 20,
+          "height_m": 0.76
+        },
+        {
+          "hour": 21,
+          "height_m": 1.0
+        },
+        {
+          "hour": 22,
+          "height_m": 1.23
+        },
+        {
+          "hour": 23,
+          "height_m": 1.36
+        },
+        {
+          "hour": 24,
+          "height_m": 1.4
+        }
+      ],
+      "amplitude_m": 2.44,
+      "tide_range_score": 100.0,
+      "lunar_date": "六月初二"
+    },
+    "2026-07-16": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.3
+        },
+        {
+          "hour": 2,
+          "height_m": 1.19
+        },
+        {
+          "hour": 3,
+          "height_m": 1.13
+        },
+        {
+          "hour": 4,
+          "height_m": 1.18
+        },
+        {
+          "hour": 5,
+          "height_m": 1.44
+        },
+        {
+          "hour": 6,
+          "height_m": 1.78
+        },
+        {
+          "hour": 7,
+          "height_m": 2.13
+        },
+        {
+          "hour": 8,
+          "height_m": 2.36
+        },
+        {
+          "hour": 9,
+          "height_m": 2.45
+        },
+        {
+          "hour": 10,
+          "height_m": 2.53
+        },
+        {
+          "hour": 11,
+          "height_m": 2.51
+        },
+        {
+          "hour": 12,
+          "height_m": 2.34
+        },
+        {
+          "hour": 13,
+          "height_m": 1.96
+        },
+        {
+          "hour": 14,
+          "height_m": 1.44
+        },
+        {
+          "hour": 15,
+          "height_m": 0.91
+        },
+        {
+          "hour": 16,
+          "height_m": 0.44
+        },
+        {
+          "hour": 17,
+          "height_m": 0.22
+        },
+        {
+          "hour": 18,
+          "height_m": 0.23
+        },
+        {
+          "hour": 19,
+          "height_m": 0.43
+        },
+        {
+          "hour": 20,
+          "height_m": 0.7
+        },
+        {
+          "hour": 21,
+          "height_m": 0.91
+        },
+        {
+          "hour": 22,
+          "height_m": 1.14
+        },
+        {
+          "hour": 23,
+          "height_m": 1.33
+        },
+        {
+          "hour": 24,
+          "height_m": 1.43
+        }
+      ],
+      "amplitude_m": 2.31,
+      "tide_range_score": 100.0,
+      "lunar_date": "六月初三"
+    },
+    "2026-07-17": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.41
+        },
+        {
+          "hour": 2,
+          "height_m": 1.28
+        },
+        {
+          "hour": 3,
+          "height_m": 1.17
+        },
+        {
+          "hour": 4,
+          "height_m": 1.09
+        },
+        {
+          "hour": 5,
+          "height_m": 1.17
+        },
+        {
+          "hour": 6,
+          "height_m": 1.43
+        },
+        {
+          "hour": 7,
+          "height_m": 1.76
+        },
+        {
+          "hour": 8,
+          "height_m": 2.08
+        },
+        {
+          "hour": 9,
+          "height_m": 2.25
+        },
+        {
+          "hour": 10,
+          "height_m": 2.34
+        },
+        {
+          "hour": 11,
+          "height_m": 2.42
+        },
+        {
+          "hour": 12,
+          "height_m": 2.39
+        },
+        {
+          "hour": 13,
+          "height_m": 2.2
+        },
+        {
+          "hour": 14,
+          "height_m": 1.8
+        },
+        {
+          "hour": 15,
+          "height_m": 1.32
+        },
+        {
+          "hour": 16,
+          "height_m": 0.84
+        },
+        {
+          "hour": 17,
+          "height_m": 0.46
+        },
+        {
+          "hour": 18,
+          "height_m": 0.34
+        },
+        {
+          "hour": 19,
+          "height_m": 0.42
+        },
+        {
+          "hour": 20,
+          "height_m": 0.66
+        },
+        {
+          "hour": 21,
+          "height_m": 0.91
+        },
+        {
+          "hour": 22,
+          "height_m": 1.09
+        },
+        {
+          "hour": 23,
+          "height_m": 1.3
+        },
+        {
+          "hour": 24,
+          "height_m": 1.44
+        }
+      ],
+      "amplitude_m": 2.08,
+      "tide_range_score": 100.0,
+      "lunar_date": "六月初四"
+    },
+    "2026-07-18": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.5
+        },
+        {
+          "hour": 2,
+          "height_m": 1.43
+        },
+        {
+          "hour": 3,
+          "height_m": 1.28
+        },
+        {
+          "hour": 4,
+          "height_m": 1.15
+        },
+        {
+          "hour": 5,
+          "height_m": 1.07
+        },
+        {
+          "hour": 6,
+          "height_m": 1.18
+        },
+        {
+          "hour": 7,
+          "height_m": 1.43
+        },
+        {
+          "hour": 8,
+          "height_m": 1.73
+        },
+        {
+          "hour": 9,
+          "height_m": 1.98
+        },
+        {
+          "hour": 10,
+          "height_m": 2.09
+        },
+        {
+          "hour": 11,
+          "height_m": 2.18
+        },
+        {
+          "hour": 12,
+          "height_m": 2.24
+        },
+        {
+          "hour": 13,
+          "height_m": 2.2
+        },
+        {
+          "hour": 14,
+          "height_m": 1.99
+        },
+        {
+          "hour": 15,
+          "height_m": 1.6
+        },
+        {
+          "hour": 16,
+          "height_m": 1.19
+        },
+        {
+          "hour": 17,
+          "height_m": 0.79
+        },
+        {
+          "hour": 18,
+          "height_m": 0.54
+        },
+        {
+          "hour": 19,
+          "height_m": 0.52
+        },
+        {
+          "hour": 20,
+          "height_m": 0.67
+        },
+        {
+          "hour": 21,
+          "height_m": 0.92
+        },
+        {
+          "hour": 22,
+          "height_m": 1.11
+        },
+        {
+          "hour": 23,
+          "height_m": 1.27
+        },
+        {
+          "hour": 24,
+          "height_m": 1.44
+        }
+      ],
+      "amplitude_m": 1.72,
+      "tide_range_score": 81.3,
+      "lunar_date": "六月初五"
+    },
+    "2026-07-19": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.54
+        },
+        {
+          "hour": 2,
+          "height_m": 1.56
+        },
+        {
+          "hour": 3,
+          "height_m": 1.45
+        },
+        {
+          "hour": 4,
+          "height_m": 1.3
+        },
+        {
+          "hour": 5,
+          "height_m": 1.16
+        },
+        {
+          "hour": 6,
+          "height_m": 1.1
+        },
+        {
+          "hour": 7,
+          "height_m": 1.22
+        },
+        {
+          "hour": 8,
+          "height_m": 1.43
+        },
+        {
+          "hour": 9,
+          "height_m": 1.66
+        },
+        {
+          "hour": 10,
+          "height_m": 1.83
+        },
+        {
+          "hour": 11,
+          "height_m": 1.9
+        },
+        {
+          "hour": 12,
+          "height_m": 1.97
+        },
+        {
+          "hour": 13,
+          "height_m": 2.01
+        },
+        {
+          "hour": 14,
+          "height_m": 1.95
+        },
+        {
+          "hour": 15,
+          "height_m": 1.74
+        },
+        {
+          "hour": 16,
+          "height_m": 1.42
+        },
+        {
+          "hour": 17,
+          "height_m": 1.09
+        },
+        {
+          "hour": 18,
+          "height_m": 0.79
+        },
+        {
+          "hour": 19,
+          "height_m": 0.67
+        },
+        {
+          "hour": 20,
+          "height_m": 0.73
+        },
+        {
+          "hour": 21,
+          "height_m": 0.92
+        },
+        {
+          "hour": 22,
+          "height_m": 1.15
+        },
+        {
+          "hour": 23,
+          "height_m": 1.3
+        },
+        {
+          "hour": 24,
+          "height_m": 1.44
+        }
+      ],
+      "amplitude_m": 1.34,
+      "tide_range_score": 56.0,
+      "lunar_date": "六月初六"
+    },
+    "2026-07-20": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.57
+        },
+        {
+          "hour": 2,
+          "height_m": 1.64
+        },
+        {
+          "hour": 3,
+          "height_m": 1.62
+        },
+        {
+          "hour": 4,
+          "height_m": 1.48
+        },
+        {
+          "hour": 5,
+          "height_m": 1.33
+        },
+        {
+          "hour": 6,
+          "height_m": 1.19
+        },
+        {
+          "hour": 7,
+          "height_m": 1.14
+        },
+        {
+          "hour": 8,
+          "height_m": 1.24
+        },
+        {
+          "hour": 9,
+          "height_m": 1.39
+        },
+        {
+          "hour": 10,
+          "height_m": 1.55
+        },
+        {
+          "hour": 11,
+          "height_m": 1.64
+        },
+        {
+          "hour": 12,
+          "height_m": 1.68
+        },
+        {
+          "hour": 13,
+          "height_m": 1.73
+        },
+        {
+          "hour": 14,
+          "height_m": 1.75
+        },
+        {
+          "hour": 15,
+          "height_m": 1.69
+        },
+        {
+          "hour": 16,
+          "height_m": 1.51
+        },
+        {
+          "hour": 17,
+          "height_m": 1.27
+        },
+        {
+          "hour": 18,
+          "height_m": 1.03
+        },
+        {
+          "hour": 19,
+          "height_m": 0.86
+        },
+        {
+          "hour": 20,
+          "height_m": 0.84
+        },
+        {
+          "hour": 21,
+          "height_m": 0.96
+        },
+        {
+          "hour": 22,
+          "height_m": 1.16
+        },
+        {
+          "hour": 23,
+          "height_m": 1.35
+        },
+        {
+          "hour": 24,
+          "height_m": 1.47
+        }
+      ],
+      "amplitude_m": 0.91,
+      "tide_range_score": 27.3,
+      "lunar_date": "六月初七"
+    },
+    "2026-07-21": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.59
+        },
+        {
+          "hour": 2,
+          "height_m": 1.68
+        },
+        {
+          "hour": 3,
+          "height_m": 1.72
+        },
+        {
+          "hour": 4,
+          "height_m": 1.67
+        },
+        {
+          "hour": 5,
+          "height_m": 1.53
+        },
+        {
+          "hour": 6,
+          "height_m": 1.37
+        },
+        {
+          "hour": 7,
+          "height_m": 1.23
+        },
+        {
+          "hour": 8,
+          "height_m": 1.18
+        },
+        {
+          "hour": 9,
+          "height_m": 1.23
+        },
+        {
+          "hour": 10,
+          "height_m": 1.31
+        },
+        {
+          "hour": 11,
+          "height_m": 1.4
+        },
+        {
+          "hour": 12,
+          "height_m": 1.43
+        },
+        {
+          "hour": 13,
+          "height_m": 1.45
+        },
+        {
+          "hour": 14,
+          "height_m": 1.49
+        },
+        {
+          "hour": 15,
+          "height_m": 1.5
+        },
+        {
+          "hour": 16,
+          "height_m": 1.46
+        },
+        {
+          "hour": 17,
+          "height_m": 1.34
+        },
+        {
+          "hour": 18,
+          "height_m": 1.18
+        },
+        {
+          "hour": 19,
+          "height_m": 1.04
+        },
+        {
+          "hour": 20,
+          "height_m": 0.97
+        },
+        {
+          "hour": 21,
+          "height_m": 1.02
+        },
+        {
+          "hour": 22,
+          "height_m": 1.17
+        },
+        {
+          "hour": 23,
+          "height_m": 1.35
+        },
+        {
+          "hour": 24,
+          "height_m": 1.51
+        }
+      ],
+      "amplitude_m": 0.75,
+      "tide_range_score": 16.7,
+      "lunar_date": "六月初八"
+    },
+    "2026-07-22": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.62
+        },
+        {
+          "hour": 2,
+          "height_m": 1.72
+        },
+        {
+          "hour": 3,
+          "height_m": 1.78
+        },
+        {
+          "hour": 4,
+          "height_m": 1.8
+        },
+        {
+          "hour": 5,
+          "height_m": 1.73
+        },
+        {
+          "hour": 6,
+          "height_m": 1.58
+        },
+        {
+          "hour": 7,
+          "height_m": 1.41
+        },
+        {
+          "hour": 8,
+          "height_m": 1.26
+        },
+        {
+          "hour": 9,
+          "height_m": 1.18
+        },
+        {
+          "hour": 10,
+          "height_m": 1.17
+        },
+        {
+          "hour": 11,
+          "height_m": 1.19
+        },
+        {
+          "hour": 12,
+          "height_m": 1.21
+        },
+        {
+          "hour": 13,
+          "height_m": 1.21
+        },
+        {
+          "hour": 14,
+          "height_m": 1.22
+        },
+        {
+          "hour": 15,
+          "height_m": 1.26
+        },
+        {
+          "hour": 16,
+          "height_m": 1.29
+        },
+        {
+          "hour": 17,
+          "height_m": 1.29
+        },
+        {
+          "hour": 18,
+          "height_m": 1.24
+        },
+        {
+          "hour": 19,
+          "height_m": 1.16
+        },
+        {
+          "hour": 20,
+          "height_m": 1.1
+        },
+        {
+          "hour": 21,
+          "height_m": 1.1
+        },
+        {
+          "hour": 22,
+          "height_m": 1.19
+        },
+        {
+          "hour": 23,
+          "height_m": 1.33
+        },
+        {
+          "hour": 24,
+          "height_m": 1.5
+        }
+      ],
+      "amplitude_m": 0.7,
+      "tide_range_score": 13.3,
+      "lunar_date": "六月初九"
+    },
+    "2026-07-23": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.64
+        },
+        {
+          "hour": 2,
+          "height_m": 1.74
+        },
+        {
+          "hour": 3,
+          "height_m": 1.83
+        },
+        {
+          "hour": 4,
+          "height_m": 1.87
+        },
+        {
+          "hour": 5,
+          "height_m": 1.87
+        },
+        {
+          "hour": 6,
+          "height_m": 1.78
+        },
+        {
+          "hour": 7,
+          "height_m": 1.62
+        },
+        {
+          "hour": 8,
+          "height_m": 1.43
+        },
+        {
+          "hour": 9,
+          "height_m": 1.25
+        },
+        {
+          "hour": 10,
+          "height_m": 1.14
+        },
+        {
+          "hour": 11,
+          "height_m": 1.07
+        },
+        {
+          "hour": 12,
+          "height_m": 1.03
+        },
+        {
+          "hour": 13,
+          "height_m": 1.02
+        },
+        {
+          "hour": 14,
+          "height_m": 1.01
+        },
+        {
+          "hour": 15,
+          "height_m": 1.03
+        },
+        {
+          "hour": 16,
+          "height_m": 1.09
+        },
+        {
+          "hour": 17,
+          "height_m": 1.15
+        },
+        {
+          "hour": 18,
+          "height_m": 1.2
+        },
+        {
+          "hour": 19,
+          "height_m": 1.2
+        },
+        {
+          "hour": 20,
+          "height_m": 1.19
+        },
+        {
+          "hour": 21,
+          "height_m": 1.17
+        },
+        {
+          "hour": 22,
+          "height_m": 1.21
+        },
+        {
+          "hour": 23,
+          "height_m": 1.31
+        },
+        {
+          "hour": 24,
+          "height_m": 1.45
+        }
+      ],
+      "amplitude_m": 0.86,
+      "tide_range_score": 24.0,
+      "lunar_date": "六月初十"
+    },
+    "2026-07-24": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.62
+        },
+        {
+          "hour": 2,
+          "height_m": 1.75
+        },
+        {
+          "hour": 3,
+          "height_m": 1.86
+        },
+        {
+          "hour": 4,
+          "height_m": 1.93
+        },
+        {
+          "hour": 5,
+          "height_m": 1.95
+        },
+        {
+          "hour": 6,
+          "height_m": 1.93
+        },
+        {
+          "hour": 7,
+          "height_m": 1.82
+        },
+        {
+          "hour": 8,
+          "height_m": 1.63
+        },
+        {
+          "hour": 9,
+          "height_m": 1.42
+        },
+        {
+          "hour": 10,
+          "height_m": 1.21
+        },
+        {
+          "hour": 11,
+          "height_m": 1.04
+        },
+        {
+          "hour": 12,
+          "height_m": 0.92
+        },
+        {
+          "hour": 13,
+          "height_m": 0.86
+        },
+        {
+          "hour": 14,
+          "height_m": 0.84
+        },
+        {
+          "hour": 15,
+          "height_m": 0.85
+        },
+        {
+          "hour": 16,
+          "height_m": 0.91
+        },
+        {
+          "hour": 17,
+          "height_m": 0.99
+        },
+        {
+          "hour": 18,
+          "height_m": 1.1
+        },
+        {
+          "hour": 19,
+          "height_m": 1.18
+        },
+        {
+          "hour": 20,
+          "height_m": 1.22
+        },
+        {
+          "hour": 21,
+          "height_m": 1.23
+        },
+        {
+          "hour": 22,
+          "height_m": 1.24
+        },
+        {
+          "hour": 23,
+          "height_m": 1.29
+        },
+        {
+          "hour": 24,
+          "height_m": 1.39
+        }
+      ],
+      "amplitude_m": 1.11,
+      "tide_range_score": 40.7,
+      "lunar_date": "六月十一"
+    },
+    "2026-07-25": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.54
+        },
+        {
+          "hour": 2,
+          "height_m": 1.71
+        },
+        {
+          "hour": 3,
+          "height_m": 1.86
+        },
+        {
+          "hour": 4,
+          "height_m": 1.97
+        },
+        {
+          "hour": 5,
+          "height_m": 2.02
+        },
+        {
+          "hour": 6,
+          "height_m": 2.03
+        },
+        {
+          "hour": 7,
+          "height_m": 1.98
+        },
+        {
+          "hour": 8,
+          "height_m": 1.83
+        },
+        {
+          "hour": 9,
+          "height_m": 1.62
+        },
+        {
+          "hour": 10,
+          "height_m": 1.36
+        },
+        {
+          "hour": 11,
+          "height_m": 1.12
+        },
+        {
+          "hour": 12,
+          "height_m": 0.91
+        },
+        {
+          "hour": 13,
+          "height_m": 0.77
+        },
+        {
+          "hour": 14,
+          "height_m": 0.7
+        },
+        {
+          "hour": 15,
+          "height_m": 0.7
+        },
+        {
+          "hour": 16,
+          "height_m": 0.75
+        },
+        {
+          "hour": 17,
+          "height_m": 0.85
+        },
+        {
+          "hour": 18,
+          "height_m": 0.97
+        },
+        {
+          "hour": 19,
+          "height_m": 1.11
+        },
+        {
+          "hour": 20,
+          "height_m": 1.21
+        },
+        {
+          "hour": 21,
+          "height_m": 1.26
+        },
+        {
+          "hour": 22,
+          "height_m": 1.27
+        },
+        {
+          "hour": 23,
+          "height_m": 1.28
+        },
+        {
+          "hour": 24,
+          "height_m": 1.33
+        }
+      ],
+      "amplitude_m": 1.33,
+      "tide_range_score": 55.3,
+      "lunar_date": "六月十二"
+    },
+    "2026-07-26": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.44
+        },
+        {
+          "hour": 2,
+          "height_m": 1.6
+        },
+        {
+          "hour": 3,
+          "height_m": 1.8
+        },
+        {
+          "hour": 4,
+          "height_m": 1.96
+        },
+        {
+          "hour": 5,
+          "height_m": 2.07
+        },
+        {
+          "hour": 6,
+          "height_m": 2.11
+        },
+        {
+          "hour": 7,
+          "height_m": 2.09
+        },
+        {
+          "hour": 8,
+          "height_m": 2.01
+        },
+        {
+          "hour": 9,
+          "height_m": 1.83
+        },
+        {
+          "hour": 10,
+          "height_m": 1.57
+        },
+        {
+          "hour": 11,
+          "height_m": 1.28
+        },
+        {
+          "hour": 12,
+          "height_m": 1.0
+        },
+        {
+          "hour": 13,
+          "height_m": 0.77
+        },
+        {
+          "hour": 14,
+          "height_m": 0.62
+        },
+        {
+          "hour": 15,
+          "height_m": 0.58
+        },
+        {
+          "hour": 16,
+          "height_m": 0.62
+        },
+        {
+          "hour": 17,
+          "height_m": 0.73
+        },
+        {
+          "hour": 18,
+          "height_m": 0.87
+        },
+        {
+          "hour": 19,
+          "height_m": 1.02
+        },
+        {
+          "hour": 20,
+          "height_m": 1.17
+        },
+        {
+          "hour": 21,
+          "height_m": 1.26
+        },
+        {
+          "hour": 22,
+          "height_m": 1.3
+        },
+        {
+          "hour": 23,
+          "height_m": 1.29
+        },
+        {
+          "hour": 24,
+          "height_m": 1.29
+        }
+      ],
+      "amplitude_m": 1.53,
+      "tide_range_score": 68.7,
+      "lunar_date": "六月十三"
+    },
+    "2026-07-27": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.34
+        },
+        {
+          "hour": 2,
+          "height_m": 1.47
+        },
+        {
+          "hour": 3,
+          "height_m": 1.66
+        },
+        {
+          "hour": 4,
+          "height_m": 1.88
+        },
+        {
+          "hour": 5,
+          "height_m": 2.06
+        },
+        {
+          "hour": 6,
+          "height_m": 2.16
+        },
+        {
+          "hour": 7,
+          "height_m": 2.18
+        },
+        {
+          "hour": 8,
+          "height_m": 2.14
+        },
+        {
+          "hour": 9,
+          "height_m": 2.01
+        },
+        {
+          "hour": 10,
+          "height_m": 1.79
+        },
+        {
+          "hour": 11,
+          "height_m": 1.49
+        },
+        {
+          "hour": 12,
+          "height_m": 1.16
+        },
+        {
+          "hour": 13,
+          "height_m": 0.86
+        },
+        {
+          "hour": 14,
+          "height_m": 0.62
+        },
+        {
+          "hour": 15,
+          "height_m": 0.51
+        },
+        {
+          "hour": 16,
+          "height_m": 0.52
+        },
+        {
+          "hour": 17,
+          "height_m": 0.63
+        },
+        {
+          "hour": 18,
+          "height_m": 0.78
+        },
+        {
+          "hour": 19,
+          "height_m": 0.95
+        },
+        {
+          "hour": 20,
+          "height_m": 1.11
+        },
+        {
+          "hour": 21,
+          "height_m": 1.24
+        },
+        {
+          "hour": 22,
+          "height_m": 1.31
+        },
+        {
+          "hour": 23,
+          "height_m": 1.31
+        },
+        {
+          "hour": 24,
+          "height_m": 1.27
+        }
+      ],
+      "amplitude_m": 1.67,
+      "tide_range_score": 78.0,
+      "lunar_date": "六月十四"
+    },
+    "2026-07-28": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.27
+        },
+        {
+          "hour": 2,
+          "height_m": 1.33
+        },
+        {
+          "hour": 3,
+          "height_m": 1.5
+        },
+        {
+          "hour": 4,
+          "height_m": 1.73
+        },
+        {
+          "hour": 5,
+          "height_m": 1.97
+        },
+        {
+          "hour": 6,
+          "height_m": 2.15
+        },
+        {
+          "hour": 7,
+          "height_m": 2.23
+        },
+        {
+          "hour": 8,
+          "height_m": 2.23
+        },
+        {
+          "hour": 9,
+          "height_m": 2.16
+        },
+        {
+          "hour": 10,
+          "height_m": 1.99
+        },
+        {
+          "hour": 11,
+          "height_m": 1.72
+        },
+        {
+          "hour": 12,
+          "height_m": 1.37
+        },
+        {
+          "hour": 13,
+          "height_m": 1.02
+        },
+        {
+          "hour": 14,
+          "height_m": 0.71
+        },
+        {
+          "hour": 15,
+          "height_m": 0.51
+        },
+        {
+          "hour": 16,
+          "height_m": 0.46
+        },
+        {
+          "hour": 17,
+          "height_m": 0.54
+        },
+        {
+          "hour": 18,
+          "height_m": 0.7
+        },
+        {
+          "hour": 19,
+          "height_m": 0.88
+        },
+        {
+          "hour": 20,
+          "height_m": 1.06
+        },
+        {
+          "hour": 21,
+          "height_m": 1.22
+        },
+        {
+          "hour": 22,
+          "height_m": 1.32
+        },
+        {
+          "hour": 23,
+          "height_m": 1.34
+        },
+        {
+          "hour": 24,
+          "height_m": 1.29
+        }
+      ],
+      "amplitude_m": 1.77,
+      "tide_range_score": 84.7,
+      "lunar_date": "六月十五"
+    },
+    "2026-07-29": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.24
+        },
+        {
+          "hour": 2,
+          "height_m": 1.23
+        },
+        {
+          "hour": 3,
+          "height_m": 1.32
+        },
+        {
+          "hour": 4,
+          "height_m": 1.54
+        },
+        {
+          "hour": 5,
+          "height_m": 1.81
+        },
+        {
+          "hour": 6,
+          "height_m": 2.07
+        },
+        {
+          "hour": 7,
+          "height_m": 2.23
+        },
+        {
+          "hour": 8,
+          "height_m": 2.28
+        },
+        {
+          "hour": 9,
+          "height_m": 2.26
+        },
+        {
+          "hour": 10,
+          "height_m": 2.15
+        },
+        {
+          "hour": 11,
+          "height_m": 1.94
+        },
+        {
+          "hour": 12,
+          "height_m": 1.61
+        },
+        {
+          "hour": 13,
+          "height_m": 1.23
+        },
+        {
+          "hour": 14,
+          "height_m": 0.87
+        },
+        {
+          "hour": 15,
+          "height_m": 0.58
+        },
+        {
+          "hour": 16,
+          "height_m": 0.46
+        },
+        {
+          "hour": 17,
+          "height_m": 0.48
+        },
+        {
+          "hour": 18,
+          "height_m": 0.63
+        },
+        {
+          "hour": 19,
+          "height_m": 0.83
+        },
+        {
+          "hour": 20,
+          "height_m": 1.01
+        },
+        {
+          "hour": 21,
+          "height_m": 1.19
+        },
+        {
+          "hour": 22,
+          "height_m": 1.31
+        },
+        {
+          "hour": 23,
+          "height_m": 1.38
+        },
+        {
+          "hour": 24,
+          "height_m": 1.34
+        }
+      ],
+      "amplitude_m": 1.82,
+      "tide_range_score": 88.0,
+      "lunar_date": "六月十六"
+    },
+    "2026-07-30": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.25
+        },
+        {
+          "hour": 2,
+          "height_m": 1.19
+        },
+        {
+          "hour": 3,
+          "height_m": 1.19
+        },
+        {
+          "hour": 4,
+          "height_m": 1.33
+        },
+        {
+          "hour": 5,
+          "height_m": 1.59
+        },
+        {
+          "hour": 6,
+          "height_m": 1.9
+        },
+        {
+          "hour": 7,
+          "height_m": 2.15
+        },
+        {
+          "hour": 8,
+          "height_m": 2.27
+        },
+        {
+          "hour": 9,
+          "height_m": 2.3
+        },
+        {
+          "hour": 10,
+          "height_m": 2.25
+        },
+        {
+          "hour": 11,
+          "height_m": 2.11
+        },
+        {
+          "hour": 12,
+          "height_m": 1.85
+        },
+        {
+          "hour": 13,
+          "height_m": 1.47
+        },
+        {
+          "hour": 14,
+          "height_m": 1.08
+        },
+        {
+          "hour": 15,
+          "height_m": 0.73
+        },
+        {
+          "hour": 16,
+          "height_m": 0.51
+        },
+        {
+          "hour": 17,
+          "height_m": 0.47
+        },
+        {
+          "hour": 18,
+          "height_m": 0.58
+        },
+        {
+          "hour": 19,
+          "height_m": 0.79
+        },
+        {
+          "hour": 20,
+          "height_m": 0.99
+        },
+        {
+          "hour": 21,
+          "height_m": 1.16
+        },
+        {
+          "hour": 22,
+          "height_m": 1.31
+        },
+        {
+          "hour": 23,
+          "height_m": 1.4
+        },
+        {
+          "hour": 24,
+          "height_m": 1.41
+        }
+      ],
+      "amplitude_m": 1.83,
+      "tide_range_score": 88.7,
+      "lunar_date": "六月十七"
+    },
+    "2026-07-31": {
+      "hourly_heights": [
+        {
+          "hour": 1,
+          "height_m": 1.32
+        },
+        {
+          "hour": 2,
+          "height_m": 1.21
+        },
+        {
+          "hour": 3,
+          "height_m": 1.14
+        },
+        {
+          "hour": 4,
+          "height_m": 1.16
+        },
+        {
+          "hour": 5,
+          "height_m": 1.37
+        },
+        {
+          "hour": 6,
+          "height_m": 1.66
+        },
+        {
+          "hour": 7,
+          "height_m": 1.98
+        },
+        {
+          "hour": 8,
+          "height_m": 2.19
+        },
+        {
+          "hour": 9,
+          "height_m": 2.27
+        },
+        {
+          "hour": 10,
+          "height_m": 2.29
+        },
+        {
+          "hour": 11,
+          "height_m": 2.21
+        },
+        {
+          "hour": 12,
+          "height_m": 2.02
+        },
+        {
+          "hour": 13,
+          "height_m": 1.7
+        },
+        {
+          "hour": 14,
+          "height_m": 1.3
+        },
+        {
+          "hour": 15,
+          "height_m": 0.93
+        },
+        {
+          "hour": 16,
+          "height_m": 0.62
+        },
+        {
+          "hour": 17,
+          "height_m": 0.5
+        },
+        {
+          "hour": 18,
+          "height_m": 0.56
+        },
+        {
+          "hour": 19,
+          "height_m": 0.75
+        },
+        {
+          "hour": 20,
+          "height_m": 0.98
+        },
+        {
+          "hour": 21,
+          "height_m": 1.15
+        },
+        {
+          "hour": 22,
+          "height_m": 1.31
+        },
+        {
+          "hour": 23,
+          "height_m": 1.42
+        },
+        {
+          "hour": 24,
+          "height_m": 1.47
+        }
+      ],
+      "amplitude_m": 1.79,
+      "tide_range_score": 86.0,
+      "lunar_date": "六月十八"
+    }
+  }
+}
