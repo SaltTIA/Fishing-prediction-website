@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Header / 「潮位刻度」signature 元素
+   --------------------------------------------------------------------------
+   Signature：右側一條垂直潮位刻度尺 + 浮標圓點，隨當前釣點
+   final_score 位移，直接源自釣魚現場的水位刻度概念。
+   ========================================================================== */
+
+.site-header {
+  position: relative;
+  padding: var(--space-lg) var(--space-md) var(--space-md);
+  border-bottom: 1px solid rgba(234, 227, 211, 0.12);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+  overflow: hidden;
+}
+
+/* 背景裝飾：半透明同心圓，模擬水波紋，低調不搶眼 */
+.site-header::before {
+  content: '';
+  position: absolute;
+  right: -80px;
+  top: -80px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 107, 53, 0.12);
+  pointer-events: none;
+}
+.site-header::after {
+  content: '';
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 107, 53, 0.08);
+  pointer-events: none;
+}
+
+.header__left { flex: 1; }
+
+.header__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-buoy-orange);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+}
+
+.header__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--color-rope-cream);
+  letter-spacing: -0.02em;
+}
+
+.header__title span {
+  color: var(--color-buoy-orange);
+}
+
+.header__subtitle {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  margin-top: var(--space-xs);
+}
+
+/* ---- 潮位刻度尺 (signature 元素) ---- */
+.tide-gauge {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  padding-top: 0.2rem;
+}
+
+.tide-gauge__label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.1em;
+}
+
+.tide-gauge__track {
+  position: relative;
+  width: 28px;
+  height: 100px;
+  background: linear-gradient(
+    to top,
+    rgba(13, 78, 92, 0.4),
+    rgba(255, 107, 53, 0.15)
+  );
+  border-radius: 14px;
+  border: 1px solid rgba(234, 227, 211, 0.18);
+  overflow: hidden;
+}
+
+/* 刻度線 */
+.tide-gauge__track::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0; bottom: 0;
+  width: 1px;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(234, 227, 211, 0.2) 0px,
+    rgba(234, 227, 211, 0.2) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  transform: translateX(-50%);
+}
+
+/* 水位填充 */
+.tide-gauge__fill {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(255, 107, 53, 0.6),
+    rgba(244, 201, 93, 0.3)
+  );
+  border-radius: 0 0 14px 14px;
+  transition: height 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* 浮標圓點 */
+.tide-gauge__buoy {
+  position: absolute;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-buoy-orange);
+  border: 2px solid var(--color-rope-cream);
+  box-shadow: var(--shadow-glow);
+  transform: translate(-50%, 50%);
+  transition: bottom 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.tide-gauge__score {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-sun-yellow);
+  line-height: 1;
+}

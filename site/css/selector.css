@@ -1,0 +1,107 @@
+/* ==========================================================================
+   釣點選擇器 + 主佈局
+   ========================================================================== */
+
+.spot-selector {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-md) 0;
+}
+
+.spot-selector__label {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+}
+
+.spot-selector select {
+  appearance: none;
+  background: var(--color-tide-blue);
+  color: var(--color-rope-cream);
+  border: 1.5px solid rgba(244, 201, 93, 0.3);
+  border-radius: var(--radius-panel);
+  padding: 0.6rem 2.4rem 0.6rem 1.1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23F4C95D' d='M3 5l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  background-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.spot-selector select:hover { border-color: var(--color-sun-yellow); }
+.spot-selector select:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(244, 201, 93, 0.25);
+}
+
+.spot-selector__meta {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+.spot-selector__meta strong { color: var(--color-sun-yellow); }
+
+/* ---- 狀態橫幅 ---- */
+.status-banner {
+  margin: var(--space-sm) var(--space-md) 0;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-panel);
+  font-size: 0.88rem;
+  display: none;
+  align-items: center;
+  gap: var(--space-xs);
+}
+.status-banner.is-visible { display: flex; }
+.status-banner--warn {
+  background: rgba(244, 201, 93, 0.1);
+  border: 1px solid rgba(244, 201, 93, 0.3);
+  color: var(--color-sun-yellow);
+}
+.status-banner--error {
+  background: rgba(224, 83, 61, 0.12);
+  border: 1px solid rgba(224, 83, 61, 0.35);
+  color: #ffb4a3;
+}
+
+/* ---- 主內容區 ---- */
+main {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 0 var(--space-xl);
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-rope-cream);
+  margin: var(--space-lg) var(--space-md) var(--space-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+.section-heading::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 1.1em;
+  background: var(--color-buoy-orange);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ---- footer ---- */
+footer.site-footer {
+  text-align: center;
+  padding: var(--space-md);
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  border-top: 1px solid rgba(234, 227, 211, 0.1);
+  margin-top: var(--space-xl);
+}
+footer.site-footer a { color: var(--color-sun-yellow); }

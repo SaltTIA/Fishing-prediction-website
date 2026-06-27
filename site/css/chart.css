@@ -1,0 +1,140 @@
+/* ==========================================================================
+   24小時綜合垂釣指數趨勢圖（SVG 純手繪，不依賴外部圖表庫）
+   ========================================================================== */
+
+.chart-panel {
+  margin: 0 var(--space-md);
+  padding: var(--space-md);
+  background: linear-gradient(160deg, rgba(19, 74, 92, 0.5), rgba(11, 46, 61, 0.3));
+  border: 1px solid rgba(234, 227, 211, 0.1);
+  border-radius: var(--radius-panel);
+  box-shadow: var(--shadow-deep);
+  position: relative;
+}
+
+.chart-panel__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.chart-panel__subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.chart-panel__legend {
+  display: flex;
+  gap: var(--space-md);
+  font-size: 0.74rem;
+  color: var(--color-text-muted);
+  flex-wrap: wrap;
+}
+.chart-panel__legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.legend-swatch {
+  width: 18px;
+  height: 3px;
+  border-radius: 2px;
+  display: inline-block;
+}
+.legend-swatch--score  { background: var(--color-buoy-orange); }
+
+/* ---- SVG 容器 ---- */
+.chart-svg-wrap {
+  width: 100%;
+  overflow-x: auto;
+  /* 細捲動條 */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,107,53,0.3) transparent;
+}
+.chart-svg-wrap svg {
+  width: 100%;
+  min-width: 520px;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+/* ---- SVG 元素 class ---- */
+.chart-gridline {
+  stroke: rgba(234, 227, 211, 0.07);
+  stroke-width: 1;
+}
+.chart-axis-label {
+  fill: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+.chart-score-area {
+  fill: url(#scoreAreaGradient);
+}
+.chart-score-line {
+  fill: none;
+  stroke: var(--color-buoy-orange);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 2px 6px rgba(255, 107, 53, 0.4));
+}
+.chart-score-dot {
+  fill: var(--color-sun-yellow);
+  stroke: var(--color-deep-sea);
+  stroke-width: 2;
+  cursor: pointer;
+  transition: r 0.1s;
+}
+.chart-score-dot:hover { r: 6; }
+
+/* ---- Tooltip ---- */
+.chart-tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: var(--color-deep-sea);
+  border: 1px solid var(--color-sun-yellow);
+  border-radius: 8px;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.76rem;
+  font-family: var(--font-mono);
+  color: var(--color-rope-cream);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.12s;
+  z-index: 10;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.chart-tooltip.is-visible { opacity: 1; }
+.chart-tooltip__score { color: var(--color-buoy-orange); font-size: 0.9rem; font-weight: 700; }
+
+/* ---- Empty state ---- */
+.chart-empty {
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+.chart-empty__icon { font-size: 2rem; margin-bottom: var(--space-xs); }
+
+/* ---- Loading skeleton ---- */
+.chart-skeleton {
+  height: 180px;
+  border-radius: var(--radius-panel);
+  background: linear-gradient(90deg,
+    rgba(255,255,255,0.03) 25%,
+    rgba(255,255,255,0.06) 50%,
+    rgba(255,255,255,0.03) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+@keyframes shimmer {
+  from { background-position: 200% 0; }
+  to   { background-position: -200% 0; }
+}

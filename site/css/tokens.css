@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Design Tokens — 香港釣魚預測網站
+   --------------------------------------------------------------------------
+   色系來源：香港漁港真實色彩——浮標橘、深海藍黑、防曬帽黃、鹹水草米白
+   避開：米色+陶土系、純黑+酸綠系、報紙細線系這三種 AI 設計俗套
+   ========================================================================== */
+
+:root {
+  /* ---- 主色調 ---- */
+  --color-deep-sea:    #0B2E3D;  /* 深海藍黑，主背景 */
+  --color-tide-blue:   #134A5C;  /* 潮水藍，卡片/面板底色 */
+  --color-buoy-orange: #FF6B35;  /* 浮標橘，主強調色 */
+  --color-sun-yellow:  #F4C95D;  /* 防曬帽黃，次強調/趨勢線 */
+  --color-rope-cream:  #EAE3D3;  /* 鹹水草米白，文字/淺色元素 */
+  --color-seaweed:     #2D6A4F;  /* 海藻綠，成功/高分狀態 */
+
+  /* ---- 文字色 ---- */
+  --color-text-primary:  #EAE3D3;
+  --color-text-muted:    rgba(234, 227, 211, 0.55);
+  --color-text-on-light: #0B2E3D;  /* 深色字放在米白卡片上 */
+
+  /* ---- 字型 ---- */
+  /* Syne：幾何無襯線，有輕微的工業/刻度質感，比常見的 Playfair/Cormorant 更少人用 */
+  /* Space Mono：等寬字，用在數字/時間刻度，帶有電子儀表感 */
+  --font-display: 'Syne', 'Noto Sans TC', sans-serif;
+  --font-body:    'DM Sans', 'Noto Sans TC', sans-serif;
+  --font-mono:    'Space Mono', monospace;
+
+  /* ---- 間距 ---- */
+  --space-xs:  0.4rem;
+  --space-sm:  0.8rem;
+  --space-md:  1.2rem;
+  --space-lg:  2rem;
+  --space-xl:  3.2rem;
+
+  /* ---- 圓角 ---- */
+  --radius-panel: 12px;
+  --radius-buoy:  20px;   /* 膠囊形，用在 tag/badge */
+
+  /* ---- 陰影 ---- */
+  --shadow-deep: 0 4px 20px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 16px rgba(255, 107, 53, 0.25);  /* 浮標橘光暈 */
+}
+
+/* Google Fonts 引入（使用 preconnect 加速） */
+/* 在 index.html 的 <head> 放：
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=DM+Sans:wght@400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+*/
+
+/* ---- reset / base ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-deep-sea);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  min-height: 100vh;
+  /* 細微的斜角紋理：模擬魚網或繩索紋 */
+  background-image:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255,255,255,0.012) 0px,
+      rgba(255,255,255,0.012) 1px,
+      transparent 1px,
+      transparent 12px
+    );
+}
+
+a { color: var(--color-sun-yellow); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button { cursor: pointer; font-family: var(--font-body); }
+img, svg { display: block; }

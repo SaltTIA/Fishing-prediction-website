@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>垂釣指數 — 香港釣場預測</title>
+  <meta name="description" content="根據香港天文台即時氣象與潮汐資料，自動計算各釣場的綜合垂釣指數。">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600&family=Space+Mono&display=swap" rel="stylesheet">
+
+  <!-- CSS（順序有意義：tokens 最先，component 最後） -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/selector.css">
+  <link rel="stylesheet" href="css/chart.css">
+  <link rel="stylesheet" href="css/fish-board.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header__left">
+      <div class="header__eyebrow">HK Fishing Predictor</div>
+      <h1 class="header__title">
+        垂釣<span>指數</span>
+      </h1>
+      <p class="header__subtitle">自動整合潮汐 × 天氣 × 風向，每 3 小時更新</p>
+    </div>
+
+    <!-- 潮位刻度（signature 元素） -->
+    <div class="tide-gauge" aria-label="當前垂釣指數計">
+      <div class="tide-gauge__label">指數</div>
+      <div class="tide-gauge__track">
+        <div class="tide-gauge__fill"  id="gauge-fill"  style="height:0%"></div>
+        <div class="tide-gauge__buoy"  id="gauge-buoy"  style="bottom:0%"></div>
+      </div>
+      <div class="tide-gauge__score" id="gauge-score">--</div>
+    </div>
+  </header>
+
+  <!-- ===== Main ===== -->
+  <main>
+
+    <!-- 釣點選擇器 -->
+    <div class="spot-selector">
+      <span class="spot-selector__label">選擇釣場</span>
+      <select id="spot-select" aria-label="選擇釣場">
+        <!-- 由 app.js 動態填入 -->
+      </select>
+      <span class="spot-selector__meta" id="spot-meta"></span>
+    </div>
+
+    <!-- 狀態橫幅 -->
+    <div class="status-banner" id="status-banner" role="alert"></div>
+
+    <!-- 24小時趨勢圖 -->
+    <h2 class="section-heading">24 小時綜合垂釣指數</h2>
+    <div class="chart-panel">
+      <div class="chart-panel__head">
+        <span class="chart-panel__subtitle" id="chart-subtitle">—</span>
+        <div class="chart-panel__legend">
+          <span>
+            <span class="legend-swatch legend-swatch--score"></span>
+            綜合指數 (0–100)
+          </span>
+        </div>
+      </div>
+      <div class="chart-svg-wrap" id="chart-wrap">
+        <div class="chart-skeleton"></div>
+      </div>
+    </div>
+
+    <!-- 目標魚種看板 -->
+    <h2 class="section-heading">常見目標魚種</h2>
+    <div class="fish-board">
+      <div class="fish-grid" id="fish-grid"></div>
+    </div>
+
+  </main>
+
+  <!-- Tooltip（全域，chart.js 控制顯示） -->
+  <div class="chart-tooltip" id="chart-tooltip" role="tooltip"></div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <p>
+      資料來源：
+      <a href="https://www.hko.gov.hk" target="_blank" rel="noopener">香港天文台</a>
+      Open Data API ／
+      本站資料僅供參考，實際出釣請自行判斷天氣安全。
+    </p>
+    <p style="margin-top:0.4rem">
+      由 GitHub Actions 自動更新 ·
+      <a href="https://github.com" target="_blank" rel="noopener">原始碼</a>
+    </p>
+  </footer>
+
+  <!-- JS（type=module 啟用 ES import/export） -->
+  <script type="module" src="js/app.js"></script>
+
+</body>
+</html>
