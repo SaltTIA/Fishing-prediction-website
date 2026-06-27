@@ -1,0 +1,54 @@
+name: "工作流 B - 每3小時即時天氣與綜合指數更新"
+
+# 觸發條件：
+# 1. 排程：每3小時一次 (UTC 0,3,6,9,12,15,18,21點，換算香港時間是8,11,14,17,20,23,2,5點)
+# 2. workflow_dispatch：手動觸發，方便測試
+on:
+  schedule:
+    - cron: "0 */3 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  fetch-frequent-weather:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write  # 沒有這行，最後的 git push 會因為預設唯讀權限被拒絕
+
+    steps:
+      - name: 簽出程式碼
+        uses: actions/checkout@v4
+
+      - name: 設定 Python 環境
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: scripts/requirements.txt
+
+      - name: 安裝相依套件
+        run: pip install -r scripts/requirements.txt
+
+      - name: 檢查工作流A的背景資料是否存在
+        # 工作流B依賴工作流A產出的 base_tide_*.json，若該檔案完全不存在
+        # （例如全新repo第一次跑，工作流A還沒執行過），這裡先給出清楚提示，
+        # 而不是讓 frequent_weather_fetch.py 跑到一半才報錯，方便你快速定位問題。
+        run: |
+          if ! ls data/base_tide_*.json 1> /dev/null 2>&1; then
+            echo "::warning::找不到任何 base_tide_*.json，請先手動觸發「工作流A」一次"
+          fi
+
+      - name: 執行即時天氣與綜合指數計算腳本
+        run: python scripts/frequent_weather_fetch.py
+
+      - name: 提交並推送更新後的資料檔案
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/tide_score_*.json
+          if git diff --staged --quiet; then
+            echo "資料無變動，跳過 commit。"
+          else
+            git commit -m "自動更新：工作流B 即時綜合垂釣指數 ($(date -u +'%Y-%m-%dT%H:%M'))"
+            git push
+          fi
