@@ -1,0 +1,63 @@
+name: "工作流 A - 每月潮汐與月相背景更新"
+
+# 觸發條件：
+# 1. 排程：每月1號 香港時間00:30 (UTC 16:30 前一天，因為GitHub Actions cron用UTC)
+# 2. workflow_dispatch：允許你在GitHub網頁手動點按鈕立即執行，方便測試/debug，
+#    不用每次都等到月初才能驗證腳本是否正常。
+on:
+  schedule:
+    - cron: "30 16 28-31 * *"  # 見下方「為何不是直接寫1號」說明
+  workflow_dispatch: {}
+
+# 為何 cron 寫 "28-31" 而不是直接寫 "1"：
+# --------------------------------------------------
+# GitHub Actions 的 cron 一律用 UTC 時間。"30 16 1 * *" 看起來是「每月1號16:30」，
+# 但換算成香港時間 (UTC+8) 會變成「每月2號 00:30」，整整晚了一天，
+# 跟需求「每月1號凌晨」不符。
+#
+# Cron 標準語法沒有「每月最後一天」這個寫法，所以這裡改用「每月28、29、30、31號
+# 都觸發」的做法 + 腳本本身的冪等設計（monthly_tide_fetch.py 永遠抓「下個月」
+# 的資料、永遠整份覆寫輸出檔案）來達到同樣效果：
+#   - 月底這4天，不管哪一天真正觸發（小月會少觸發1-2次，大月會觸發到31號），
+#     每次執行的最終輸出結果都相同（都是下個月的潮汐資料）。
+#   - 代價是same job 在月底會多跑2-4次、多打幾次政府API，
+#     但這支API免費、無流量限制，多打幾次不影響「零成本」目標，
+#     換來的是不用處理cron時區換算的複雜度，對「免維護」更重要。
+
+jobs:
+  fetch-monthly-tide:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15  # 防止API卡住導致job無限running，超過15分鐘自動失敗
+    permissions:
+      contents: write  # 沒有這行，最後的 git push 會因為預設唯讀權限被拒絕
+
+    steps:
+      - name: 簽出程式碼
+        uses: actions/checkout@v4
+
+      - name: 設定 Python 環境
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: scripts/requirements.txt
+
+      - name: 安裝相依套件
+        run: pip install -r scripts/requirements.txt
+
+      - name: 執行潮汐資料抓取腳本
+        run: python scripts/monthly_tide_fetch.py
+
+      - name: 提交並推送更新後的資料檔案
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/base_tide_*.json
+          # 用 git diff --staged --quiet 判斷是否真的有變動，
+          # 沒變動就不要產生空白commit，保持commit歷史乾淨。
+          if git diff --staged --quiet; then
+            echo "資料無變動，跳過 commit。"
+          else
+            git commit -m "自動更新：工作流A 每月潮汐背景資料 ($(date -u +'%Y-%m-%d'))"
+            git push
+          fi
