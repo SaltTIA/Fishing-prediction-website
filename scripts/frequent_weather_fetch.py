@@ -41,7 +41,7 @@ from spots_config import FISHING_SPOTS_CONFIG, validate_config
 HKO_WEATHER_URL = "https://data.weather.gov.hk/weatherAPI/opendata/weather.php"
 REQUEST_TIMEOUT = 15
 
-DATA_DIR = Path(__file__).parent.parent / "data"
+DATA_DIR = Path(__file__).parent.parent / "docs" / "data"
 
 # 方位詞 -> 角度 (0=北, 90=東, 180=南, 270=西)，由細到粗排列方便比對
 DIRECTION_MAP = [
