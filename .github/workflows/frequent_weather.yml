@@ -29,12 +29,15 @@ jobs:
       - name: 安裝相依套件
         run: pip install -r scripts/requirements.txt
 
+      - name: 建立輸出目錄（若不存在）
+        run: mkdir -p docs/data
+
       - name: 檢查工作流A的背景資料是否存在
         # 工作流B依賴工作流A產出的 base_tide_*.json，若該檔案完全不存在
         # （例如全新repo第一次跑，工作流A還沒執行過），這裡先給出清楚提示，
         # 而不是讓 frequent_weather_fetch.py 跑到一半才報錯，方便你快速定位問題。
         run: |
-          if ! ls data/base_tide_*.json 1> /dev/null 2>&1; then
+          if ! ls docs/data/base_tide_*.json 1> /dev/null 2>&1; then
             echo "::warning::找不到任何 base_tide_*.json，請先手動觸發「工作流A」一次"
           fi
 
@@ -45,7 +48,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/tide_score_*.json
+          git add docs/data/tide_score_*.json
           if git diff --staged --quiet; then
             echo "資料無變動，跳過 commit。"
           else
