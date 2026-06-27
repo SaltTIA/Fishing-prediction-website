@@ -11,7 +11,7 @@
    - 振幅越小 = 小潮 (水流溫和)
    這是一個簡化的經驗公式，不是嚴謹的海洋學模型，之後可依實際釣況調整權重。
 3. 同時呼叫農曆轉換 API，標註每天的農曆日期（民間經驗常說初一/十五前後大潮）。
-4. 輸出 data/base_tide_<spot_id>.json，給工作流 B 讀取後做動態融合。
+4. 輸出 docs/data/base_tide_<spot_id>.json，給工作流 B 讀取後做動態融合。
 
 注意：
 - 此腳本只依賴 Python 標準庫 + requests，避免安裝額外套件拖慢 CI。
@@ -35,7 +35,7 @@ from spots_config import FISHING_SPOTS_CONFIG, validate_config
 HKO_OPENDATA_URL = "https://data.weather.gov.hk/weatherAPI/opendata/opendata.php"
 HKO_LUNAR_URL = "https://data.weather.gov.hk/weatherAPI/opendata/lunardate.php"
 
-OUTPUT_DIR = Path(__file__).parent.parent / "data"
+OUTPUT_DIR = Path(__file__).parent.parent / "docs" / "data"
 REQUEST_TIMEOUT = 15  # 秒。政府 API 偶爾會慢，給足夠時間但不要無限等
 RETRY_COUNT = 3
 RETRY_BACKOFF_SECONDS = 5
