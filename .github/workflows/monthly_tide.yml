@@ -45,6 +45,9 @@ jobs:
       - name: 安裝相依套件
         run: pip install -r scripts/requirements.txt
 
+      - name: 建立輸出目錄（若不存在）
+        run: mkdir -p docs/data
+
       - name: 執行潮汐資料抓取腳本
         run: python scripts/monthly_tide_fetch.py
 
@@ -52,7 +55,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/base_tide_*.json
+          git add docs/data/base_tide_*.json
           # 用 git diff --staged --quiet 判斷是否真的有變動，
           # 沒變動就不要產生空白commit，保持commit歷史乾淨。
           if git diff --staged --quiet; then
