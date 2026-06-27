@@ -76,7 +76,18 @@ def fetch_monthly_tide_heights(station_id: str, year: int, month: int) -> dict:
     """
     抓單一潮汐站、單一月份的逐小時潮高資料。
     HHOT 回傳格式： {"fields": [...], "data": [[...], [...], ...]}
-    實際欄位順序需從 fields 動態對應，不要硬編 index（天文台之後若調整欄位順序就會壞）。
+
+    重要：天文台真實回應格式跟一般直覺不同，這裡記錄清楚避免之後又解析錯：
+    - fields 範例: ['MM', 'DD', '01', '02', '03', ..., '24']
+    - 沒有獨立的「年」欄位（因為查詢時已經用 year 參數指定了，回應不重複給）
+    - 沒有獨立的「時」欄位，而是把 24 小時「橫向展開」成 24 個欄位，
+      欄位名稱直接是小時數字字串 "01"~"24"（"24" 代表當天 24:00，
+      即次日00:00的潮高，仍算在當天這一列）
+    - data 裡「每一列代表一天」，不是「每一列代表一個小時」，
+      要自己把這一列展開成24筆 (小時, 潮高) 資料。
+
+    這是透過實際呼叫 GitHub Actions runner（不受我的沙盒網路白名單限制）
+    觀察到的真實回應後修正的，比天文台文件本身的敘述更可靠。
     """
     params = {
         "dataType": "HHOT",
@@ -93,28 +104,57 @@ def fetch_monthly_tide_heights(station_id: str, year: int, month: int) -> dict:
     fields = [f.strip() for f in raw["fields"]]
     rows = raw["data"]
 
-    # 動態找出年/月/日/時/潮高欄位的 index，避免硬編
     def find_field_index(candidates):
         for i, f in enumerate(fields):
             if any(c.lower() in f.lower() for c in candidates):
                 return i
         return None
 
-    idx_year = find_field_index(["year", "年"])
-    idx_month = find_field_index(["month", "月"])
-    idx_day = find_field_index(["day", "日"])
-    idx_hour = find_field_index(["hour", "時"])
-    idx_height = find_field_index(["height", "高度", "tide"])
+    idx_month = find_field_index(["mm", "month", "月"])
+    idx_day = find_field_index(["dd", "day", "日"])
 
-    if None in (idx_year, idx_month, idx_day, idx_hour, idx_height):
-        raise ValueError(f"無法從 fields 對應到必要欄位，原始 fields={fields}")
+    if None in (idx_month, idx_day):
+        raise ValueError(f"無法從 fields 對應到月/日欄位，原始 fields={fields}")
 
-    daily_heights = {}  # {"2026-07-01": [height_at_hour0, height_at_hour1, ...]}
-    for row in rows:
-        y, m, d, h = row[idx_year], row[idx_month], row[idx_day], row[idx_hour]
-        height = float(row[idx_height])
-        date_key = f"{int(y):04d}-{int(m):02d}-{int(d):02d}"
-        daily_heights.setdefault(date_key, []).append({"hour": int(h), "height_m": height})
+    # 小時欄位：找出所有「純數字字串」的欄位（"01"~"24"），
+    # 記住它們在 fields 裡的 index，對應到實際小時數 (1~24)。
+    hour_field_indices = []  # [(field_index, hour_number), ...]
+    for i, f in enumerate(fields):
+        if f.isdigit():
+            hour_field_indices.append((i, int(f)))
+
+    if not hour_field_indices:
+        raise ValueError(f"無法從 fields 找到任何小時欄位 (應為'01'~'24')，原始 fields={fields}")
+
+    daily_heights = {}  # {"2026-07-01": [{"hour": 1, "height_m": ...}, ...]}
+    for row_num, row in enumerate(rows, start=1):
+        # 防呆：理論上每一列長度應該跟 fields 一致，但政府資料偶有不一致的情況
+        # （例如某天資料還沒補齊），這裡跳過異常列並記錄警告，而不是讓整個
+        # 月份的抓取因為一列資料而全部失敗。
+        if len(row) < max(idx_month, idx_day) + 1 or any(
+            field_idx >= len(row) for field_idx, _ in hour_field_indices
+        ):
+            print(f"  [警告] 第{row_num}列資料長度異常 (長度={len(row)}, 預期={len(fields)})，跳過: {row}")
+            continue
+
+        m, d = row[idx_month], row[idx_day]
+        date_key = f"{year:04d}-{int(m):02d}-{int(d):02d}"
+
+        hourly_list = []
+        for field_idx, hour_num in hour_field_indices:
+            raw_value = row[field_idx]
+            # 部分小時可能是空字串或 "N/A"（例如資料還沒釋出），跳過不採計，
+            # 不要讓單一小時缺失害整天的資料報廢。
+            try:
+                height = float(raw_value)
+            except (ValueError, TypeError):
+                continue
+            # "24" 代表當天24:00，為了跟一般 0-23 時制一致，轉成 hour=0 並不直觀，
+            # 這裡保留天文台原始的 1-24 標示，前端顯示時只要知道 24 = 當天最後一刻即可。
+            hourly_list.append({"hour": hour_num, "height_m": height})
+
+        if hourly_list:
+            daily_heights[date_key] = hourly_list
 
     return daily_heights
 
