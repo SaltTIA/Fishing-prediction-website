@@ -1,0 +1,195 @@
+{
+  "spot_id": "cheung_chau",
+  "spot_name": "長洲",
+  "status": "ok",
+  "generated_at": "2026-06-28T01:22:54.035669+08:00",
+  "current_wind_angle": 225,
+  "current_wind_speed_kmh": 15,
+  "facing_direction": 200,
+  "has_rain_somewhere_in_hk": true,
+  "hourly_scores": [
+    {
+      "datetime": "2026-06-28T01:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T02:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T03:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T04:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T05:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T06:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T07:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T08:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T09:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T10:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T11:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T12:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T13:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T14:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T15:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T16:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T17:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T18:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T19:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T20:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T21:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T22:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-28T23:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    },
+    {
+      "datetime": "2026-06-29T00:00:00+08:00",
+      "tide_range_score": 99.3,
+      "wind_terrain_score": 48.3,
+      "final_score": 68.9,
+      "fallback_used": true
+    }
+  ],
+  "target_fish": [
+    {
+      "name": "黑鱲",
+      "type": "底棲/鯛科"
+    },
+    {
+      "name": "石貼",
+      "type": "底棲/岩礁"
+    },
+    {
+      "name": "獅頭魚",
+      "type": "底棲"
+    }
+  ],
+  "data_source_note": "風向資料來自天文台9天預報的文字描述（逐日更新），並非逐3小時的即時觀測風速風向；潮汐背景分來自天文台預測潮汐API。"
+}
