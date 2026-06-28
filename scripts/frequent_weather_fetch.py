@@ -41,7 +41,7 @@ from spots_config import FISHING_SPOTS_CONFIG, validate_config
 HKO_WEATHER_URL = "https://data.weather.gov.hk/weatherAPI/opendata/weather.php"
 REQUEST_TIMEOUT = 15
 
-DATA_DIR = Path(__file__).parent.parent / "docs" / "data"
+DATA_DIR = Path(__file__).parent.parent / "data"
 
 # 方位詞 -> 角度 (0=北, 90=東, 180=南, 270=西)，由細到粗排列方便比對
 DIRECTION_MAP = [
@@ -211,6 +211,7 @@ def build_24h_score_series(base_tide: dict, wind_score_info: dict, has_rain: boo
 
         series.append({
             "datetime": ts.strftime("%Y-%m-%dT%H:00:00+08:00"),
+            "hour": ts.hour,            # 0-23，供前端 chart.js tooltip 與 app.js matchHr 使用
             "tide_range_score": tide_score,
             "wind_terrain_score": wind_score,
             "final_score": final_score,
@@ -240,6 +241,8 @@ def process_spot(spot_id: str, cfg: dict, wind_angle: float | None,
     return {
         "spot_id": spot_id,
         "spot_name": cfg["name"],
+        "station_id": cfg["station_id"],        # 供前端 spot-meta 顯示潮汐站資訊
+        "station_note": cfg.get("station_note", ""),
         "status": "ok",
         "generated_at": datetime.now(timezone(timedelta(hours=8))).isoformat(),
         "current_wind_angle": wind_angle,
