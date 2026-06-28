@@ -58,6 +58,42 @@ FISHING_SPOTS_CONFIG = {
             {"name": "獅頭魚", "type": "底棲"},
         ],
     },
+    "ng_tung_river": {
+        "name": "梧桐河",
+        "station_id": "KLW",       # 借用高流灣 (Kau Lau Wan)，沙頭角海一帶最近站
+        "station_note": "借用高流灣(KLW)資料，梧桐河出海口位於沙頭角海",
+        "facing_direction": 135,   # 東南（面向沙頭角海）
+        "target_fish": [
+            {"name": "鯇魚", "type": "草食性/上層"},
+            {"name": "大頭魚", "type": "濾食性/上層"},
+            {"name": "烏頭", "type": "上層/雜食"},
+            {"name": "鯪魚", "type": "底棲/雜食"},
+        ],
+    },
+    "tsuen_wan_pier": {
+        "name": "荃灣碼頭",
+        "station_id": "KCT",       # 葵涌 (Kwai Chung)，與荃灣同處藍巴勒海峽
+        "station_note": "借用葵涌(KCT)資料，荃灣碼頭位於藍巴勒海峽",
+        "facing_direction": 225,   # 西南（面向藍巴勒海峽）
+        "target_fish": [
+            {"name": "烏頭", "type": "上層/雜食"},
+            {"name": "金鼓", "type": "底棲/鯛科"},
+            {"name": "牛屎鱲", "type": "底棲/岩礁"},
+            {"name": "泥鯭", "type": "全水層"},
+        ],
+    },
+    "tuen_mun_pier": {
+        "name": "屯門碼頭",
+        "station_id": "TBT",       # 尖鼻咀 (Tsim Bei Tsui)，就在屯門旁，最近官方站
+        "station_note": "借用尖鼻咀(TBT)資料，為屯門一帶最近官方潮汐站",
+        "facing_direction": 270,   # 朝西（面向青山灣出口）
+        "target_fish": [
+            {"name": "烏頭", "type": "上層/雜食"},
+            {"name": "黃腳鱲", "type": "底棲/鯛科"},
+            {"name": "石狗公", "type": "底棲/岩礁"},
+            {"name": "泥鯭", "type": "全水層"},
+        ],
+    },
 }
 
 # 天文台預測潮汐 API 支援的全部站碼（用於程式內驗證，避免打錯字）
