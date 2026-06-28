@@ -1,35 +1,35 @@
 {
-  "spot_id": "tolo_harbour",
-  "spot_name": "吐露港",
-  "station_id": "TPK",
-  "station_note": "天文台無吐露港專屬站，借用大埔滘(TPK)資料",
+  "spot_id": "ng_tung_river",
+  "spot_name": "梧桐河",
+  "station_id": "KLW",
+  "station_note": "借用高流灣(KLW)資料，梧桐河出海口位於沙頭角海",
   "target_fish": [
     {
-      "name": "黑沙鱲",
-      "type": "底棲/鯛科"
+      "name": "鯇魚",
+      "type": "草食性/上層"
     },
     {
-      "name": "黃腳鱲",
-      "type": "底棲/鯛科"
+      "name": "大頭魚",
+      "type": "濾食性/上層"
     },
     {
       "name": "烏頭",
       "type": "上層/雜食"
     },
     {
-      "name": "泥鯭",
-      "type": "全水層"
+      "name": "鯪魚",
+      "type": "底棲/雜食"
     }
   ],
   "status": "ok",
-  "overall_score": 49.1,
+  "overall_score": 52.0,
   "hourly_scores": [],
-  "wind_score": 47.8,
+  "wind_score": 55.0,
   "tide_score_today": 50.0,
   "has_rain": false,
   "wind_direction": 180,
   "wind_text": "南風2至3級。",
   "data_source_note": "風向來自天文台9天預報文字解析（逐日，非逐小時實測值），準確度有限。潮汐來自工作流A(HHOT)。",
-  "updated_at": "2026-06-28T16:40:01.758675+00:00",
+  "updated_at": "2026-06-28T16:40:01.761350+00:00",
   "date": "2026-06-29"
 }
