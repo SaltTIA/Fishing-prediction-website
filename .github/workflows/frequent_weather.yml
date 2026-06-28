@@ -42,7 +42,13 @@ jobs:
           fi
 
       - name: 執行即時天氣與綜合指數計算腳本
+        id: run-script
         run: python scripts/frequent_weather_fetch.py
+        continue-on-error: true
+        # continue-on-error: true 讓腳本就算 exit 1 也不會打斷後面的步驟。
+        # 這樣 git push 一定會執行，前端至少能看到 status:"error" 的 JSON，
+        # 而不是因為 push 被跳過而看到 HTTP 404。
+        # 最後一個步驟會根據 outcome 決定 job 是否標記為失敗，保留可見度。
 
       - name: 提交並推送更新後的資料檔案
         run: |
@@ -55,3 +61,12 @@ jobs:
             git commit -m "自動更新：工作流B 即時綜合垂釣指數 ($(date -u +'%Y-%m-%dT%H:%M'))"
             git push
           fi
+
+      - name: 若腳本失敗則標記 job 失敗
+        if: steps.run-script.outcome == 'failure'
+        # 走到這步代表腳本 exit 1 但 push 已成功執行。
+        # 這裡主動讓 job 以失敗結束，讓你在 GitHub Actions 介面一眼看到紅色，
+        # 不會以為一切正常（通常原因是工作流A還沒跑，或 API 臨時故障）。
+        run: |
+          echo "::error::frequent_weather_fetch.py 以非0狀態退出，請檢查上方錯誤訊息（通常是工作流A尚未執行）。"
+          exit 1
