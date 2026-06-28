@@ -24,6 +24,22 @@ function hourToX(i, total) {
 }
 
 /**
+ * 從 hourly_scores 元素解析出 0-23 的顯示小時數
+ * 相容兩種 Python 輸出：
+ *   - HHOT 約定：hour 為 1-24（1=0時, 24=23時）
+ *   - datetime.hour：hour 為 0-23
+ * 如果 hour 欄位不存在或無效，fallback 用陣列 index
+ */
+function resolveDisplayHour(h, index) {
+  const raw = h.hour;
+  if (raw == null || isNaN(Number(raw))) return index % 24;
+  const n = Number(raw);
+  if (n >= 1 && n <= 24) return n - 1;   // HHOT 1-24 → 0-23
+  if (n >= 0 && n <= 23) return n;        // datetime.hour 0-23
+  return index % 24;                       // 其他值 fallback
+}
+
+/**
  * @param {HTMLElement} wrapEl   .chart-svg-wrap 元素
  * @param {Array}       hours    hourly_scores 陣列（已按 hour 排序）
  * @param {HTMLElement} tooltip  .chart-tooltip 元素
@@ -42,9 +58,10 @@ export function renderChart(wrapEl, hours, tooltip) {
     x: hourToX(i, hours.length),
     y: scoreToY(h.final_score),
     score: h.final_score,
-    hour: h.hour,
+    displayHour: resolveDisplayHour(h, i),   // ← 統一用這個，不直接碰 h.hour
     wind_score: h.wind_score,
     tide_score: h.tide_score,
+    index: i,
   }));
 
   // 折線路徑
@@ -65,20 +82,20 @@ export function renderChart(wrapEl, hours, tooltip) {
     `;
   }).join("");
 
-  // X 軸刻度（每4小時一個標籤，避免擁擠）
+  // X 軸刻度（每4點一個標籤，用 displayHour 顯示）
   const xLabels = pts
-    .filter(p => p.hour % 4 === 0 || p.hour === 1)
+    .filter((_, i) => i % 4 === 0)
     .map(p => {
-      const label = p.hour === 1 ? "00" : String(p.hour - 1).padStart(2, "0");
+      const label = String(p.displayHour).padStart(2, "0");
       return `<text class="chart-axis-label" x="${p.x}" y="${H - 6}" text-anchor="middle">${label}時</text>`;
     }).join("");
 
-  // 資料點圓點
-  const dots = pts.map((p, i) => `
+  // 資料點圓點（用 data-index 傳 index，避免 NaN）
+  const dots = pts.map((p) => `
     <circle class="chart-score-dot"
       cx="${p.x}" cy="${p.y}" r="4"
-      data-i="${i}"
-      data-hour="${p.hour}"
+      data-index="${p.index}"
+      data-display-hour="${p.displayHour}"
       data-score="${p.score.toFixed(1)}"
       data-tide="${(p.tide_score ?? "--")}"
       data-wind="${(p.wind_score ?? "--")}"
@@ -121,8 +138,7 @@ export function renderChart(wrapEl, hours, tooltip) {
   // ---- Tooltip 互動 ----
   wrapEl.querySelectorAll(".chart-score-dot").forEach(dot => {
     dot.addEventListener("mouseenter", e => {
-      const hour = parseInt(dot.dataset.hour);
-      const displayHour = String(hour === 24 ? 23 : hour - 1).padStart(2, "0");
+      const displayHour = String(dot.dataset.displayHour).padStart(2, "0");
       const score = parseFloat(dot.dataset.score);
       tooltip.innerHTML = `
         <div>${displayHour}:00</div>
