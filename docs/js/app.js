@@ -24,6 +24,9 @@ const SPOTS = {
   tolo_harbour:  { name: "吐露港",  emoji: "⚓" },
   tsim_sha_tsui: { name: "尖沙咀",  emoji: "🌆" },
   cheung_chau:   { name: "長洲",    emoji: "🏝" },
+  ng_tung_river: { name: "梧桐河",  emoji: "🌿" },
+  tsuen_wan_pier:{ name: "荃灣碼頭", emoji: "🚢" },
+  tuen_mun_pier: { name: "屯門碼頭", emoji: "⛵" },
 };
 
 // ---- 初始化下拉選單 ----
