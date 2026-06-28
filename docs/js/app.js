@@ -61,7 +61,7 @@ async function onSpotChange(spotId) {
   renderChart(chartWrap, hours, tooltip);
 
   // 計算當前分數（取最接近現在時刻的小時，或用 overall_score fallback）
-  const nowHour  = new Date().getHours() + 1;  // HHOT 用 1-24 計時
+  const nowHour  = new Date().getHours();  // 0-23，與 hourly_scores 的 hour 欄位一致
   const matchHr  = hours.find(h => h.hour === nowHour);
   const score    = matchHr?.final_score ?? data.overall_score ?? null;
 
