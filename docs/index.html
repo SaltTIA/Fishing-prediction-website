@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600&family=Space+Mono&display=swap" rel="stylesheet">
   <!-- CSS（順序有意義：tokens 最先，component 最後） -->
   <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/warning-banner.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/selector.css">
   <link rel="stylesheet" href="css/chart.css">
@@ -20,6 +21,8 @@
   <link rel="stylesheet" href="css/history.css">
 </head>
 <body>
+  <!-- ===== 台風 / 惡劣天氣警告橫幅 ===== -->
+  <div class="weather-warning-banner" id="weather-warning-banner" role="alert" aria-live="polite" aria-atomic="true"></div>
   <!-- ===== Header ===== -->
   <header class="site-header">
     <div class="header__left">
@@ -106,5 +109,9 @@
   </footer>
   <!-- JS（type=module 啟用 ES import/export） -->
   <script type="module" src="js/app.js"></script>
+  <script type="module">
+    import { initWarningBanner } from "./js/warning-banner.js";
+    initWarningBanner(document.getElementById("weather-warning-banner"));
+  </script>
 </body>
 </html>
