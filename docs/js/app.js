@@ -1,11 +1,12 @@
 /**
  * app.js — 主應用邏輯
- * 整合：釣點下拉選單 → 資料載入 → 圖表渲染 → 魚種看板 → 潮位刻度
+ * 整合：釣點下拉選單 → 資料載入 → 圖表渲染 → 魚種看板 → 潮位刻度 → 今日總結卡
  */
 
 import { loadSpotData } from "./data-loader.js";
 import { renderChart }  from "./chart.js";
 import { getFishEmoji } from "./fish-emoji.js";
+import { renderSummary, renderSummaryLoading } from "./summary.js";
 
 // ---- DOM 元素 ----
 const spotSelect    = document.getElementById("spot-select");
@@ -18,6 +19,7 @@ const tooltip       = document.getElementById("chart-tooltip");
 const gaugeScore    = document.getElementById("gauge-score");
 const gaugeFill     = document.getElementById("gauge-fill");
 const gaugeBuoy     = document.getElementById("gauge-buoy");
+const summaryCardEl = document.getElementById("summary-card");
 
 // ---- 釣點設定（對應後端 spots_config.py，只有前端需要的部分） ----
 const SPOTS = {
@@ -45,6 +47,7 @@ async function onSpotChange(spotId) {
   fishGrid.innerHTML  = "";
   chartSubtitle.textContent = "載入中…";
   updateGauge(null);
+  renderSummaryLoading(summaryCardEl);
 
   // 2. 載入資料
   const data = await loadSpotData(spotId);
@@ -53,6 +56,7 @@ async function onSpotChange(spotId) {
   if (data.status === "fetch_error") {
     setStatus("error", `⚠ ${data.error_message}`);
     chartWrap.innerHTML = `<div class="chart-empty"><div class="chart-empty__icon">🎣</div>資料載入失敗，請稍後再試</div>`;
+    summaryCardEl.innerHTML = "";
     return;
   }
   if (data.status === "error") {
@@ -85,6 +89,9 @@ async function onSpotChange(spotId) {
   // 8. 渲染魚種卡片
   const fish = data.target_fish ?? [];
   renderFishBoard(fish);
+
+  // 9. 渲染今日垂釣總結卡
+  renderSummary(summaryCardEl, spotId, data);
 }
 
 // ---- 魚種看板渲染 ----
