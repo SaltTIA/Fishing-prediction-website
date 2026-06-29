@@ -7,6 +7,7 @@ import { loadSpotData } from "./data-loader.js";
 import { renderChart }  from "./chart.js";
 import { getFishEmoji } from "./fish-emoji.js";
 import { renderSummary, renderSummaryLoading } from "./summary.js";
+import { renderRanking } from "./ranking.js";
 
 // ---- DOM 元素 ----
 const spotSelect    = document.getElementById("spot-select");
@@ -20,6 +21,7 @@ const gaugeScore    = document.getElementById("gauge-score");
 const gaugeFill     = document.getElementById("gauge-fill");
 const gaugeBuoy     = document.getElementById("gauge-buoy");
 const summaryCardEl = document.getElementById("summary-card");
+const rankingBoardEl = document.getElementById("ranking-board");
 
 // ---- 釣點設定（對應後端 spots_config.py，只有前端需要的部分） ----
 const SPOTS = {
@@ -149,3 +151,11 @@ spotSelect.addEventListener("change", () => onSpotChange(spotSelect.value));
 
 // ---- 初始載入第一個釣點 ----
 onSpotChange(Object.keys(SPOTS)[0]);
+
+// ---- 釣點排名看板（並行載入，與主流程無關） ----
+renderRanking(rankingBoardEl, (spotId) => {
+  spotSelect.value = spotId;
+  onSpotChange(spotId);
+  // 滾回頂部讓使用者看到切換後的詳情
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
