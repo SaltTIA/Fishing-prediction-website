@@ -1,0 +1,183 @@
+/* ==========================================================================
+   今日垂釣總結卡
+   ========================================================================== */
+
+.summary-card {
+  margin: var(--space-lg) var(--space-md) 0;
+  padding: var(--space-md) var(--space-lg);
+  background: linear-gradient(160deg, rgba(19, 74, 92, 0.6), rgba(11, 46, 61, 0.4));
+  border: 1px solid rgba(234, 227, 211, 0.12);
+  border-radius: var(--radius-panel);
+  box-shadow: var(--shadow-deep);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 左側發光邊條，顏色跟隨評級 */
+.summary-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  border-radius: var(--radius-panel) 0 0 var(--radius-panel);
+  background: var(--summary-accent, #FF6B35);
+  box-shadow: 0 0 20px var(--summary-accent, #FF6B35);
+  transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* ---- 頂部：評級 + 百分比 ---- */
+.summary-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.summary-card__verdict {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--summary-accent, #FF6B35);
+  transition: color 0.5s ease;
+}
+
+.summary-card__pct-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.summary-card__pct {
+  font-family: var(--font-mono);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-sun-yellow);
+  line-height: 1;
+}
+
+.summary-card__pct-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ---- 因素 Pills ---- */
+.summary-card__factors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.factor-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-buoy);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  border: 1px solid;
+  transition: opacity 0.3s;
+}
+
+.factor-pill--good {
+  background: rgba(45, 106, 79, 0.25);
+  border-color: rgba(45, 106, 79, 0.6);
+  color: #6fcf97;
+}
+
+.factor-pill--ok {
+  background: rgba(244, 201, 93, 0.12);
+  border-color: rgba(244, 201, 93, 0.35);
+  color: var(--color-sun-yellow);
+}
+
+.factor-pill--bad {
+  background: rgba(224, 83, 61, 0.12);
+  border-color: rgba(224, 83, 61, 0.35);
+  color: #ffb4a3;
+}
+
+.factor-pill__icon {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+/* ---- 分隔線 ---- */
+.summary-card__divider {
+  height: 1px;
+  background: rgba(234, 227, 211, 0.1);
+  margin: var(--space-sm) 0;
+}
+
+/* ---- 釣法建議區 ---- */
+.summary-card__advice {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-sm);
+}
+
+.advice-block {
+  background: rgba(11, 46, 61, 0.45);
+  border: 1px solid rgba(234, 227, 211, 0.08);
+  border-radius: 8px;
+  padding: var(--space-sm) var(--space-md);
+}
+
+.advice-block__label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--color-buoy-orange);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.advice-block__content {
+  font-size: 0.85rem;
+  color: var(--color-rope-cream);
+  line-height: 1.5;
+}
+
+/* ---- 不應該去狀態 ---- */
+.summary-card--no-go .summary-card__advice {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+/* ---- 進場動畫 ---- */
+.summary-card {
+  animation: card-enter 0.4s ease backwards;
+}
+@keyframes card-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- skeleton ---- */
+.summary-skeleton {
+  height: 160px;
+  border-radius: var(--radius-panel);
+  background: linear-gradient(90deg,
+    rgba(255,255,255,0.03) 25%,
+    rgba(255,255,255,0.05) 50%,
+    rgba(255,255,255,0.03) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  margin: var(--space-lg) var(--space-md) 0;
+}
+
+@keyframes shimmer {
+  from { background-position: 200% center; }
+  to   { background-position: -200% center; }
+}
