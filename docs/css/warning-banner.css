@@ -1,0 +1,226 @@
+/* ==========================================================================
+   台風 / 惡劣天氣警告橫幅
+   --------------------------------------------------------------------------
+   即時從香港天文台 Open API 拉取現行警告信號，
+   依嚴重程度顯示不同樣式的全幅橫幅。
+   ========================================================================== */
+
+/* ---- 橫幅容器 ---- */
+.weather-warning-banner {
+  display: none;               /* 預設隱藏；JS 拿到警告才顯示 */
+  position: relative;
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 2px solid transparent;
+  overflow: hidden;
+  animation: warning-enter 0.4s ease backwards;
+}
+
+@keyframes warning-enter {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 橫向掃光動畫（模擬緊急廣播感） */
+.weather-warning-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.04) 50%,
+    transparent 65%
+  );
+  background-size: 200% 100%;
+  animation: sweep 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes sweep {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+/* ---- 可見態 ---- */
+.weather-warning-banner.is-active {
+  display: block;
+}
+
+/* ---- 嚴重程度：警示（黃色：8號或以下） ---- */
+.weather-warning-banner--caution {
+  background: linear-gradient(
+    135deg,
+    rgba(244, 201, 93, 0.12),
+    rgba(244, 201, 93, 0.06)
+  );
+  border-bottom-color: rgba(244, 201, 93, 0.45);
+}
+
+/* ---- 嚴重程度：警告（橙色：強烈季候風信號、黑雨等） ---- */
+.weather-warning-banner--warning {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 53, 0.15),
+    rgba(255, 107, 53, 0.07)
+  );
+  border-bottom-color: rgba(255, 107, 53, 0.55);
+}
+
+/* ---- 嚴重程度：危險（紅色：8號或以上台風、10號風球） ---- */
+.weather-warning-banner--danger {
+  background: linear-gradient(
+    135deg,
+    rgba(224, 83, 61, 0.20),
+    rgba(224, 83, 61, 0.10)
+  );
+  border-bottom-color: rgba(224, 83, 61, 0.65);
+}
+
+/* 危險等級加入脈衝閃爍邊框 */
+.weather-warning-banner--danger::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-bottom: 2px solid rgba(224, 83, 61, 0.65);
+  animation: pulse-border 1.6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse-border {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+/* ---- 內容佈局 ---- */
+.warning-banner__inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-xs) 0;
+}
+
+/* 警告圖示 */
+.warning-banner__icon {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  flex-shrink: 0;
+  /* 危險等級旋轉動畫 */
+  transition: transform 0.3s;
+}
+
+.weather-warning-banner--danger .warning-banner__icon {
+  animation: icon-spin 4s linear infinite;
+}
+
+@keyframes icon-spin {
+  0%   { transform: rotate(0deg);   }
+  25%  { transform: rotate(-15deg); }
+  75%  { transform: rotate(15deg);  }
+  100% { transform: rotate(0deg);   }
+}
+
+/* 文字區 */
+.warning-banner__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.warning-banner__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.98rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* 嚴重程度文字顏色 */
+.weather-warning-banner--caution  .warning-banner__title { color: var(--color-sun-yellow); }
+.weather-warning-banner--warning  .warning-banner__title { color: var(--color-buoy-orange); }
+.weather-warning-banner--danger   .warning-banner__title { color: #ffb4a3; }
+
+/* 訊號徽章 */
+.warning-signal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.12rem 0.55rem;
+  border-radius: var(--radius-buoy);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  opacity: 0.9;
+}
+
+.warning-banner__signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.35rem;
+}
+
+/* 「勿出海」警示標籤 */
+.warning-no-fish-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: var(--radius-buoy);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  background: rgba(224, 83, 61, 0.2);
+  border: 1px solid rgba(224, 83, 61, 0.5);
+  color: #ffb4a3;
+}
+
+.warning-banner__desc {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-top: 0.1rem;
+}
+
+/* HKO 連結 */
+.warning-banner__link {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-sun-yellow);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  align-self: center;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid rgba(244, 201, 93, 0.3);
+  border-radius: var(--radius-buoy);
+  transition: background 0.2s, border-color 0.2s;
+}
+.warning-banner__link:hover {
+  background: rgba(244, 201, 93, 0.1);
+  border-color: rgba(244, 201, 93, 0.6);
+  text-decoration: none;
+}
+
+/* ---- 載入骨架 ---- */
+.warning-banner__skeleton {
+  height: 52px;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.02) 25%,
+    rgba(255,255,255,0.04) 50%,
+    rgba(255,255,255,0.02) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  border-bottom: 1px solid rgba(234, 227, 211, 0.08);
+}
