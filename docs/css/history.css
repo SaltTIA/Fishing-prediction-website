@@ -1,0 +1,262 @@
+/* ==========================================================================
+   歷史指數記錄面板
+   ========================================================================== */
+
+.history-panel {
+  margin: 0 var(--space-md);
+  background: linear-gradient(160deg, rgba(19, 74, 92, 0.55), rgba(11, 46, 61, 0.38));
+  border: 1px solid rgba(234, 227, 211, 0.11);
+  border-radius: var(--radius-panel);
+  box-shadow: var(--shadow-deep);
+  overflow: hidden;
+  animation: card-enter 0.4s ease backwards;
+}
+
+/* ---- 頂部：Sparkline + 統計 ---- */
+.history-panel__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid rgba(234, 227, 211, 0.08);
+  flex-wrap: wrap;
+}
+
+/* Sparkline 容器 */
+.history-panel__spark-wrap {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.history-spark {
+  width: 100%;
+  max-width: 260px;
+  height: 48px;
+  display: block;
+  overflow: visible;
+}
+
+.history-spark-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.history-spark-meta__label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.06em;
+}
+
+/* 趨勢標籤 */
+.history-trend {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.1rem 0.5rem;
+  border-radius: var(--radius-buoy);
+}
+.history-trend--up   { color: #6fcf97; background: rgba(45, 106, 79, 0.2);  border: 1px solid rgba(45,106,79,0.5); }
+.history-trend--down { color: #ffb4a3; background: rgba(224, 83, 61, 0.12); border: 1px solid rgba(224,83,61,0.35); }
+.history-trend--flat { color: var(--color-text-muted); background: rgba(234,227,211,0.06); border: 1px solid rgba(234,227,211,0.15); }
+
+/* 統計三格 */
+.history-stats {
+  display: flex;
+  gap: var(--space-md);
+  flex-shrink: 0;
+}
+
+.history-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.history-stat__val {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.history-stat__label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ---- 明細行 ---- */
+.history-rows {
+  padding: var(--space-sm) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  max-height: 320px;
+  overflow-y: auto;
+  /* 自訂捲軸（Webkit） */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,107,53,0.4) transparent;
+}
+.history-rows::-webkit-scrollbar       { width: 4px; }
+.history-rows::-webkit-scrollbar-track { background: transparent; }
+.history-rows::-webkit-scrollbar-thumb { background: rgba(255,107,53,0.35); border-radius: 2px; }
+
+.history-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.history-row__date {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  min-width: 3.0rem;
+  flex-shrink: 0;
+  letter-spacing: 0.04em;
+}
+
+.history-row__bar-wrap {
+  flex: 1;
+}
+
+.history-row__bar-track {
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(234, 227, 211, 0.08);
+  overflow: hidden;
+}
+
+.history-row__bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.history-row__score {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  min-width: 2rem;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.history-row__badge {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-buoy);
+  border: 1px solid;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 4.5rem;
+  text-align: center;
+}
+
+.history-row__badge--great {
+  background: rgba(45,106,79,0.2);
+  border-color: rgba(45,106,79,0.5);
+  color: #6fcf97;
+}
+.history-row__badge--good {
+  background: rgba(255,107,53,0.12);
+  border-color: rgba(255,107,53,0.4);
+  color: var(--color-buoy-orange);
+}
+.history-row__badge--fair {
+  background: rgba(244,201,93,0.1);
+  border-color: rgba(244,201,93,0.35);
+  color: var(--color-sun-yellow);
+}
+.history-row__badge--nogo {
+  background: rgba(224,83,61,0.1);
+  border-color: rgba(224,83,61,0.35);
+  color: #ffb4a3;
+}
+
+/* ---- 底部操作列 ---- */
+.history-panel__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-lg);
+  border-top: 1px solid rgba(234, 227, 211, 0.07);
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.history-footer-note {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+}
+
+.history-clear-btn {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: rgba(255, 180, 163, 0.8);
+  background: transparent;
+  border: 1px solid rgba(224, 83, 61, 0.3);
+  border-radius: var(--radius-buoy);
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  flex-shrink: 0;
+}
+.history-clear-btn:hover {
+  background: rgba(224, 83, 61, 0.15);
+  border-color: rgba(224, 83, 61, 0.6);
+  color: #ffb4a3;
+}
+
+/* ---- 空狀態 ---- */
+.history-empty {
+  margin: 0 var(--space-md);
+  padding: var(--space-lg);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+  border: 1px dashed rgba(234,227,211,0.12);
+  border-radius: var(--radius-panel);
+  line-height: 1.8;
+}
+.history-empty__icon {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: var(--space-sm);
+}
+
+/* ---- Skeleton ---- */
+.history-skeleton {
+  height: 120px;
+  margin: 0 var(--space-md);
+  border-radius: var(--radius-panel);
+  background: linear-gradient(90deg,
+    rgba(255,255,255,0.03) 25%,
+    rgba(255,255,255,0.055) 50%,
+    rgba(255,255,255,0.03) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 480px) {
+  .history-panel__header { gap: var(--space-sm); }
+  .history-stats { gap: var(--space-sm); }
+  .history-stat__val { font-size: 1.2rem; }
+  .history-rows { padding: var(--space-sm); max-height: 260px; }
+  .history-row__badge { display: none; }
+}
