@@ -5,21 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>垂釣指數 — 香港釣場預測</title>
   <meta name="description" content="根據香港天文台即時氣象與潮汐資料，自動計算各釣場的綜合垂釣指數。">
-
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600&family=Space+Mono&display=swap" rel="stylesheet">
-
   <!-- CSS（順序有意義：tokens 最先，component 最後） -->
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/selector.css">
   <link rel="stylesheet" href="css/chart.css">
+  <link rel="stylesheet" href="css/summary-card.css">
   <link rel="stylesheet" href="css/fish-board.css">
 </head>
 <body>
-
   <!-- ===== Header ===== -->
   <header class="site-header">
     <div class="header__left">
@@ -29,7 +27,6 @@
       </h1>
       <p class="header__subtitle">自動整合潮汐 × 天氣 × 風向，每 3 小時更新</p>
     </div>
-
     <!-- 潮位刻度（signature 元素） -->
     <div class="tide-gauge" aria-label="當前垂釣指數計">
       <div class="tide-gauge__label">指數</div>
@@ -40,10 +37,8 @@
       <div class="tide-gauge__score" id="gauge-score">--</div>
     </div>
   </header>
-
   <!-- ===== Main ===== -->
   <main>
-
     <!-- 釣點選擇器 -->
     <div class="spot-selector">
       <span class="spot-selector__label">選擇釣場</span>
@@ -52,10 +47,10 @@
       </select>
       <span class="spot-selector__meta" id="spot-meta"></span>
     </div>
-
     <!-- 狀態橫幅 -->
     <div class="status-banner" id="status-banner" role="alert"></div>
-
+    <!-- 今日垂釣總結卡 -->
+    <div id="summary-card"></div>
     <!-- 24小時趨勢圖 -->
     <h2 class="section-heading">24 小時綜合垂釣指數</h2>
     <div class="chart-panel">
@@ -72,18 +67,14 @@
         <div class="chart-skeleton"></div>
       </div>
     </div>
-
     <!-- 目標魚種看板 -->
     <h2 class="section-heading">常見目標魚種</h2>
     <div class="fish-board">
       <div class="fish-grid" id="fish-grid"></div>
     </div>
-
   </main>
-
   <!-- Tooltip（全域，chart.js 控制顯示） -->
   <div class="chart-tooltip" id="chart-tooltip" role="tooltip"></div>
-
   <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <p>
@@ -97,9 +88,7 @@
       <a href="https://github.com" target="_blank" rel="noopener">原始碼</a>
     </p>
   </footer>
-
   <!-- JS（type=module 啟用 ES import/export） -->
   <script type="module" src="js/app.js"></script>
-
 </body>
 </html>
