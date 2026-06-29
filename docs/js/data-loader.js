@@ -8,7 +8,6 @@
  *   /docs/data/tide_score_xxx.json  ← 資料
  * 兩者同在 docs/ 下，直接用 ./data/ 相對路徑存取。
  */
-
 const DATA_BASE_PATH = "./data";
 
 /**
