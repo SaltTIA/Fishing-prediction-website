@@ -8,6 +8,7 @@ import { renderChart }  from "./chart.js";
 import { getFishEmoji } from "./fish-emoji.js";
 import { renderSummary, renderSummaryLoading } from "./summary.js";
 import { renderRanking } from "./ranking.js";
+import { recordScore, renderHistory, renderHistoryLoading } from "./history.js";
 
 // ---- DOM 元素 ----
 const spotSelect    = document.getElementById("spot-select");
@@ -22,6 +23,7 @@ const gaugeFill     = document.getElementById("gauge-fill");
 const gaugeBuoy     = document.getElementById("gauge-buoy");
 const summaryCardEl = document.getElementById("summary-card");
 const rankingBoardEl = document.getElementById("ranking-board");
+const historyBoardEl = document.getElementById("history-board");
 
 // ---- 釣點設定（對應後端 spots_config.py，只有前端需要的部分） ----
 const SPOTS = {
@@ -50,6 +52,7 @@ async function onSpotChange(spotId) {
   chartSubtitle.textContent = "載入中…";
   updateGauge(null);
   renderSummaryLoading(summaryCardEl);
+  renderHistoryLoading(historyBoardEl);
 
   // 2. 載入資料
   const data = await loadSpotData(spotId);
@@ -59,6 +62,7 @@ async function onSpotChange(spotId) {
     setStatus("error", `⚠ ${data.error_message}`);
     chartWrap.innerHTML = `<div class="chart-empty"><div class="chart-empty__icon">🎣</div>資料載入失敗，請稍後再試</div>`;
     summaryCardEl.innerHTML = "";
+    historyBoardEl.innerHTML = "";
     return;
   }
   if (data.status === "error") {
@@ -94,6 +98,11 @@ async function onSpotChange(spotId) {
 
   // 9. 渲染今日垂釣總結卡
   renderSummary(summaryCardEl, spotId, data);
+
+  // 10. 記錄歷史並渲染歷史面板
+  const dateStr = data.date ?? new Date().toISOString().slice(0, 10);
+  recordScore(spotId, data.overall_score, dateStr);
+  renderHistory(historyBoardEl, spotId, () => renderHistory(historyBoardEl, spotId));
 }
 
 // ---- 魚種看板渲染 ----
