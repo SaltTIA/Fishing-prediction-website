@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/chart.css">
   <link rel="stylesheet" href="css/summary-card.css">  <!-- ← 新增 -->
   <link rel="stylesheet" href="css/fish-board.css">
+  <link rel="stylesheet" href="css/ranking.css">
 </head>
 <body>
   <!-- ===== Header ===== -->
@@ -76,6 +77,11 @@
     <div class="fish-board">
       <div class="fish-grid" id="fish-grid"></div>
     </div>
+
+    <!-- 所有釣點一覽排名 -->
+    <h2 class="section-heading">所有釣點一覽排名</h2>
+    <p class="ranking-hint">點擊任一釣點可切換詳情 ↑</p>
+    <div id="ranking-board"></div>
   </main>
   <!-- Tooltip（全域，chart.js 控制顯示） -->
   <div class="chart-tooltip" id="chart-tooltip" role="tooltip"></div>
