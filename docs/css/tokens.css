@@ -53,7 +53,10 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
-  font-size: 16px;
+  /* 全站字體放大：原本以 16px 為 1rem 基準，
+     提高基準字級可讓所有用 rem 設定的文字等比放大，
+     不需逐一修改每個元件的 font-size。 */
+  font-size: 22px;
   scroll-behavior: smooth;
 }
 
