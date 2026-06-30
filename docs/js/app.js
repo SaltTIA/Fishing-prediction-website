@@ -5,7 +5,7 @@
 
 import { loadSpotData } from "./data-loader.js";
 import { renderChart }  from "./chart.js";
-import { getFishEmoji } from "./fish-emoji.js";
+import { getFishEmoji, getFishImage } from "./fish-emoji.js";
 import { renderSummary, renderSummaryLoading } from "./summary.js";
 import { renderRanking } from "./ranking.js";
 import { recordScore, renderHistory, renderHistoryLoading } from "./history.js";
