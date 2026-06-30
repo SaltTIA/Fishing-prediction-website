@@ -78,7 +78,7 @@
 .chart-axis-label {
   fill: var(--color-text-muted);
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 16px;
 }
 .chart-score-area {
   fill: url(#scoreAreaGradient);
@@ -111,7 +111,7 @@
 .chart-best-label {
   fill: #6fcf97;
   font-family: var(--font-mono);
-  font-size: 9.5px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
@@ -126,7 +126,7 @@
 .chart-threshold-label {
   fill: #6fcf97;
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 14px;
   opacity: 0.85;
 }
 
