@@ -62,9 +62,9 @@ FISHING_SPOTS_CONFIG = {
         "station_note": "借用高流灣(KLW)資料，梧桐河出海口位於沙頭角海",
         "facing_direction": 135,   # 東南（面向沙頭角海）
         "target_fish": [
-            {"name": "鯇魚", "type": "草食性/上層"},
-            {"name": "大頭魚", "type": "濾食性/上層"},
-            {"name": "烏頭", "type": "上層/雜食"},
+            {"name": "羅非魚", "type": "雜食/上層"},
+            {"name": "塘虱", "type": "底棲/雜食"},
+            {"name": "生魚", "type": "掠食性"},
             {"name": "鯪魚", "type": "底棲/雜食"},
         ],
     },
