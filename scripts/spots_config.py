@@ -54,8 +54,6 @@ FISHING_SPOTS_CONFIG = {
         "facing_direction": 200,   # 西南
         "target_fish": [
             {"name": "黑鱲", "type": "底棲/鯛科"},
-            {"name": "石貼", "type": "底棲/岩礁"},
-            {"name": "獅頭魚", "type": "底棲"},
         ],
     },
     "ng_tung_river": {
