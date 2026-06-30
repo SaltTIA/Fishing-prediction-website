@@ -14,8 +14,6 @@ export const FISH_EMOJI = {
   "細鱗":   "🐟",
   "鱸魚":   "🐊",
   "黑鱲":   "🐟",
-  "石貼":   "🦑",
-  "獅頭魚": "🦁",
 };
 
 const TYPE_FALLBACK = [
