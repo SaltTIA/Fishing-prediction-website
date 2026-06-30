@@ -111,14 +111,21 @@ function renderFishBoard(fishList) {
     fishGrid.innerHTML = `<p style="color:var(--color-text-muted);font-size:0.9rem">此釣點暫無魚種資料</p>`;
     return;
   }
-  fishGrid.innerHTML = fishList.map(f => `
+  fishGrid.innerHTML = fishList.map(f => {
+  const imgUrl = getFishImage(f.name);
+  const visual = imgUrl
+    ? `<img class="fish-card__img" src="${imgUrl}" alt="${f.name}"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block'">`
+    + `<div class="fish-card__emoji" style="display:none">${getFishEmoji(f.name, f.type)}</div>`
+    : `<div class="fish-card__emoji">${getFishEmoji(f.name, f.type)}</div>`;
+  return `
     <div class="fish-card">
-      <div class="fish-card__emoji">${getFishEmoji(f.name, f.type)}</div>
+      ${visual}
       <div class="fish-card__name">${f.name}</div>
       <div class="fish-card__type">${f.type}</div>
     </div>
-  `).join("");
-}
+  `;
+}).join("");
 
 // ---- 潮位刻度更新 ----
 function updateGauge(score) {
