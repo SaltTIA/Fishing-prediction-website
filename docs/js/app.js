@@ -5,7 +5,7 @@
 
 import { loadSpotData } from "./data-loader.js";
 import { renderChart }  from "./chart.js";
-import { getFishEmoji, getFishImage } from "./fish-emoji.js";
+import { getFishEmoji } from "./fish-emoji.js";
 import { renderSummary, renderSummaryLoading } from "./summary.js";
 import { renderRanking } from "./ranking.js";
 import { recordScore, renderHistory, renderHistoryLoading } from "./history.js";
@@ -33,6 +33,8 @@ const SPOTS = {
   ng_tung_river: { name: "梧桐河",  emoji: "🌿" },
   tsuen_wan_pier:{ name: "荃灣碼頭", emoji: "🚢" },
   tuen_mun_pier: { name: "屯門碼頭", emoji: "⛵" },
+
+  tin_shui_wai_river:{ name: "天水圍河", emoji: "🏞" },
 };
 
 // ---- 初始化下拉選單 ----
