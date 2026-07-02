@@ -1,4 +1,4 @@
-"""
+﻿"""
 釣點與魚種中繼資料設定檔 (Single Source of Truth)
 ==================================================
 工作流 A (monthly_tide_fetch.py) 與工作流 B (frequent_weather_fetch.py)
