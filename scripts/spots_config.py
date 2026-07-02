@@ -92,6 +92,18 @@ FISHING_SPOTS_CONFIG = {
             {"name": "泥鯭", "type": "全水層"},
         ],
     },
+    "tin_shui_wai_river": {
+        "name": "天水圍河",
+        "station_id": "TBT",       # 借用尖鼻咀 (Tsim Bei Tsui)，天水圍最近官方潮汐站
+        "station_note": "借用尖鼻咀(TBT)資料，天水圍河近后海灣",
+        "facing_direction": 315,   # 西北（河道走向）
+        "target_fish": [
+            {"name": "羅非魚", "type": "淡水/底層"},
+            {"name": "鯉魚", "type": "淡水/底層"},
+            {"name": "鯽魚", "type": "淡水/底層"},
+            {"name": "生魚", "type": "掠食性"},
+        ],
+    },
 }
 
 # 天文台預測潮汐 API 支援的全部站碼（用於程式內驗證，避免打錯字）
