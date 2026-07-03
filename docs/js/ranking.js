@@ -15,7 +15,7 @@ const SPOTS = {
   tsuen_wan_pier: { name: "荃灣碼頭", emoji: "🚢" },
   tuen_mun_pier:  { name: "屯門碼頭", emoji: "⛵" },
   tin_shui_wai_river: { name: "天水圍河", emoji: "🏞" },
-};   
+};
 
 const VERDICTS = [
   { min: 80, label: "非常適合", cssClass: "rank-badge--great" },
