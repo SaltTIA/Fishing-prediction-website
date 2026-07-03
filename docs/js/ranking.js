@@ -1,4 +1,4 @@
-/**
+﻿/**
  * ranking.js — 所有釣點一覽排名
  * 職責：並行載入所有釣點資料，按 overall_score 排名，渲染排名看板。
  * 直接複用 data-loader.js 的 loadSpotData，保持單一資料來源。
