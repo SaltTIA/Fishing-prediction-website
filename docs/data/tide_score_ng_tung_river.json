@@ -197,8 +197,8 @@
   "tide_score_today": 91.3,
   "has_rain": false,
   "wind_direction": 225,
-  "wind_text": "南至西南風4級，初時離岸5級。",
+  "wind_text": "西南風4級。",
   "data_source_note": "風向來自天文台9天預報文字解析（逐日，非逐小時實測值），準確度有限。潮汐來自工作流A(HHOT)。",
-  "updated_at": "2026-07-11T18:45:15.958433+00:00",
+  "updated_at": "2026-07-11T21:40:12.655185+00:00",
   "date": "2026-07-12"
 }
