@@ -197,8 +197,8 @@
   "tide_score_today": 34.0,
   "has_rain": true,
   "wind_direction": 225,
-  "wind_text": "西南風4級。",
+  "wind_text": "南至西南風3至4級。",
   "data_source_note": "風向來自天文台9天預報文字解析（逐日，非逐小時實測值），準確度有限。潮汐來自工作流A(HHOT)。",
-  "updated_at": "2026-07-20T02:03:36.574790+00:00",
+  "updated_at": "2026-07-20T06:00:04.406653+00:00",
   "date": "2026-07-20"
 }
