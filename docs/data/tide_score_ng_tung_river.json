@@ -22,183 +22,183 @@
     }
   ],
   "status": "ok",
-  "overall_score": 53.9,
+  "overall_score": 45.1,
   "hourly_scores": [
     {
       "hour": 1,
-      "height_m": 1.51,
-      "tide_score": 73.4,
+      "height_m": 1.55,
+      "tide_score": 67.6,
       "wind_score": 55.0,
-      "final_score": 66.1
+      "final_score": 62.5
     },
     {
       "hour": 2,
-      "height_m": 1.67,
-      "tide_score": 93.7,
+      "height_m": 1.65,
+      "tide_score": 81.1,
       "wind_score": 55.0,
-      "final_score": 78.2
+      "final_score": 70.6
     },
     {
       "hour": 3,
-      "height_m": 1.72,
+      "height_m": 1.76,
+      "tide_score": 95.9,
+      "wind_score": 55.0,
+      "final_score": 79.6
+    },
+    {
+      "hour": 4,
+      "height_m": 1.79,
       "tide_score": 100.0,
       "wind_score": 55.0,
       "final_score": 82.0
     },
     {
-      "hour": 4,
-      "height_m": 1.64,
-      "tide_score": 89.9,
-      "wind_score": 55.0,
-      "final_score": 75.9
-    },
-    {
       "hour": 5,
-      "height_m": 1.48,
-      "tide_score": 69.6,
+      "height_m": 1.7,
+      "tide_score": 87.8,
       "wind_score": 55.0,
-      "final_score": 63.8
+      "final_score": 74.7
     },
     {
       "hour": 6,
-      "height_m": 1.31,
-      "tide_score": 48.1,
+      "height_m": 1.53,
+      "tide_score": 64.9,
       "wind_score": 55.0,
-      "final_score": 50.9
+      "final_score": 60.9
     },
     {
       "hour": 7,
-      "height_m": 1.18,
-      "tide_score": 31.6,
+      "height_m": 1.35,
+      "tide_score": 40.5,
       "wind_score": 55.0,
-      "final_score": 41.0
+      "final_score": 46.3
     },
     {
       "hour": 8,
-      "height_m": 1.17,
-      "tide_score": 30.4,
+      "height_m": 1.22,
+      "tide_score": 23.0,
       "wind_score": 55.0,
-      "final_score": 40.2
+      "final_score": 35.8
     },
     {
       "hour": 9,
-      "height_m": 1.29,
-      "tide_score": 45.6,
+      "height_m": 1.18,
+      "tide_score": 17.6,
       "wind_score": 55.0,
-      "final_score": 49.3
+      "final_score": 32.5
     },
     {
       "hour": 10,
-      "height_m": 1.41,
-      "tide_score": 60.8,
+      "height_m": 1.21,
+      "tide_score": 21.6,
       "wind_score": 55.0,
-      "final_score": 58.5
+      "final_score": 35.0
     },
     {
       "hour": 11,
-      "height_m": 1.43,
-      "tide_score": 63.3,
+      "height_m": 1.24,
+      "tide_score": 25.7,
       "wind_score": 55.0,
-      "final_score": 60.0
+      "final_score": 37.4
     },
     {
       "hour": 12,
-      "height_m": 1.36,
-      "tide_score": 54.4,
+      "height_m": 1.21,
+      "tide_score": 21.6,
       "wind_score": 55.0,
-      "final_score": 54.7
+      "final_score": 35.0
     },
     {
       "hour": 13,
-      "height_m": 1.34,
-      "tide_score": 51.9,
+      "height_m": 1.16,
+      "tide_score": 14.9,
       "wind_score": 55.0,
-      "final_score": 53.1
+      "final_score": 30.9
     },
     {
       "hour": 14,
-      "height_m": 1.42,
-      "tide_score": 62.0,
+      "height_m": 1.15,
+      "tide_score": 13.5,
       "wind_score": 55.0,
-      "final_score": 59.2
+      "final_score": 30.1
     },
     {
       "hour": 15,
-      "height_m": 1.47,
-      "tide_score": 68.4,
+      "height_m": 1.21,
+      "tide_score": 21.6,
       "wind_score": 55.0,
-      "final_score": 63.0
+      "final_score": 35.0
     },
     {
       "hour": 16,
-      "height_m": 1.42,
-      "tide_score": 62.0,
+      "height_m": 1.27,
+      "tide_score": 29.7,
       "wind_score": 55.0,
-      "final_score": 59.2
+      "final_score": 39.8
     },
     {
       "hour": 17,
-      "height_m": 1.29,
-      "tide_score": 45.6,
+      "height_m": 1.27,
+      "tide_score": 29.7,
       "wind_score": 55.0,
-      "final_score": 49.3
+      "final_score": 39.8
     },
     {
       "hour": 18,
-      "height_m": 1.12,
-      "tide_score": 24.1,
+      "height_m": 1.2,
+      "tide_score": 20.3,
       "wind_score": 55.0,
-      "final_score": 36.4
+      "final_score": 34.2
     },
     {
       "hour": 19,
-      "height_m": 0.98,
-      "tide_score": 6.3,
+      "height_m": 1.11,
+      "tide_score": 8.1,
       "wind_score": 55.0,
-      "final_score": 25.8
+      "final_score": 26.9
     },
     {
       "hour": 20,
-      "height_m": 0.93,
+      "height_m": 1.05,
       "tide_score": 0.0,
       "wind_score": 55.0,
       "final_score": 22.0
     },
     {
       "hour": 21,
-      "height_m": 1.04,
-      "tide_score": 13.9,
+      "height_m": 1.07,
+      "tide_score": 2.7,
       "wind_score": 55.0,
-      "final_score": 30.4
+      "final_score": 23.6
     },
     {
       "hour": 22,
-      "height_m": 1.26,
-      "tide_score": 41.8,
+      "height_m": 1.21,
+      "tide_score": 21.6,
       "wind_score": 55.0,
-      "final_score": 47.1
+      "final_score": 35.0
     },
     {
       "hour": 23,
-      "height_m": 1.44,
-      "tide_score": 64.6,
+      "height_m": 1.4,
+      "tide_score": 47.3,
       "wind_score": 55.0,
-      "final_score": 60.7
+      "final_score": 50.4
     },
     {
       "hour": 24,
-      "height_m": 1.51,
-      "tide_score": 73.4,
+      "height_m": 1.55,
+      "tide_score": 67.6,
       "wind_score": 55.0,
-      "final_score": 66.1
+      "final_score": 62.5
     }
   ],
   "wind_score": 55.0,
-  "tide_score_today": 19.3,
+  "tide_score_today": 16.0,
   "has_rain": false,
   "wind_direction": 180,
   "wind_text": "南風3至4級。",
   "data_source_note": "風向來自天文台9天預報文字解析（逐日，非逐小時實測值），準確度有限。潮汐來自工作流A(HHOT)。",
-  "updated_at": "2026-07-21T13:17:20.184096+00:00",
-  "date": "2026-07-21"
+  "updated_at": "2026-07-21T16:16:19.274865+00:00",
+  "date": "2026-07-22"
 }
