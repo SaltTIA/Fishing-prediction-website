@@ -196,9 +196,9 @@
   "wind_score": 50.0,
   "tide_score_today": 100.0,
   "has_rain": false,
-  "wind_direction": null,
-  "wind_text": "微風2級。",
+  "wind_direction": 45,
+  "wind_text": "北至東北風3至4級，離岸間中5級，高地達6級。",
   "data_source_note": "風向來自天文台9天預報文字解析（逐日，非逐小時實測值），準確度有限。潮汐來自工作流A(HHOT)。",
-  "updated_at": "2026-11-27T03:22:21.287409+00:00",
+  "updated_at": "2026-11-27T15:50:35.084011+00:00",
   "date": "2026-11-27"
 }
